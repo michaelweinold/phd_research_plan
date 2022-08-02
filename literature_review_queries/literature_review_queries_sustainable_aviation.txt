@@ -1,0 +1,1 @@
+ABS("life cycle assessment" OR "life-cycle assessment") AND (ABS("aviation") OR ABS("air transport")) AND PUBYEAR = 2021
