@@ -8,11 +8,17 @@
 \usepackage{url} 
 % tables
 \usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt}
 % fonts
 \usepackage{amsfonts}
 \usepackage{microtype}
 % figures
 \usepackage{graphicx}
+% enumeration
+\usepackage{enumitem}
+
 
 
 \title{Life-Cycle Assessment for Sustainable Aviation}
@@ -67,7 +73,7 @@ how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
 
 \section{Hybrid Life Cycle Assessment}
 
-	What is life-cycle assessement?
+	What is life-cycle assessment?
 	Why is its use in aviation a novelty?
 	
 	Some recent publications have completely disregarded the impact of life-cycle emissions under the assumption that these would be negligible \cite{brazzola_definitions_2022}.
@@ -92,6 +98,116 @@ how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
 \section{Questions}
 
 How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} compare against the new ICAO paper \cite{prussi_corsia_2021}
+
+\newpage
+\section{Systematic Literature Review}
+
+    \subsection{Life-Cycle Assessment of (Sustainable) Aviation}
+    
+\section{Appendix}
+
+    \subsection{Details of Systematic Literature Review Methodology}
+    
+        \subsubsection{Boolean Search Logic}
+
+            \begin{table}[htbp]
+                \centering
+                \begin{tabularx}{\textwidth}{| X | X |}
+                    \hline
+                    \textit{field of research} & \textit{search logic} \\
+                    \hline
+                    (1.1) LCA specific to (sustainable) aviation & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (1.2) hybrid LCA specific to (sustainable) aviation &  \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (2.1) hybrid LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (2.2) prospective (hybrid) LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (3.1) impact of different GHG standards/implementations in LCA & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                \end{tabularx}
+                \caption{Boolean search logic}
+            \end{table}
+            
+        \subsubsection{Inclusion/Exclusion Criteria}
+        
+            \begin{enumerate}
+                \item LCA specific to (sustainable) aviation
+                \begin{enumerate}[label*=\arabic*]
+                    \item LCA used as primary method of investigation
+                    \item LCA XXX no catering etc.
+                \end{enumerate}
+            \end{enumerate}
+        
+            \begin{table}[htbp]
+                \centering
+                \begin{tabularx}{\textwidth}{| X | X |}
+                    \hline
+                \multicolumn{2}{|l|}{(1.1) LCA specific to (sustainable) aviation}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        LCA used as primary method  \newline
+                    &
+                        LCA target domain too specific \newline (e.g. "aviation catering") \newline
+                        fuel input too specific \newline (e.g. "bioethanol production from expired cookies") \newline
+                        journal subject ares in social sciences \newline
+                        journal subject area in life sciences
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{(1.2) hybrid LCA specific to (sustainable) aviation}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        hybrid LCA used as primary method  \newline
+                    &
+                        all exclusion criteria applied in (1.1) \newline
+                        primary focus on hybrid-electric propulsion \newline
+                        (e.g. "Feasibility Study of Hybrid Propulsion")
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{(2.1) hybrid LCA methods}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        hybridization methodology is primary focus \newline
+                        process-based life-cycle assessment (PLCA) \newline
+                        multi-regional input-output tables (MRIO) \newline
+                        environmentally extended IO analysis (EEIOA) \newline
+                        specific databases: EXIOBASE, ecoinvent \newline
+                        focus on truncation errors and double-counting
+                    &
+                        journal subject area in health sciences \newline
+                        journal subject area in social sciences \newline
+                        journal subject area in life sciences
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{(2.2) hybrid LCA methods}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        all inclusion criteria applied in (2.1) \newline
+                        prospective/future hybrid LCA
+                    &
+                        all exclusion criteria applied in (2.1)
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{(3.1) impact of different GHG standards/implementations in LCA}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        comparison of specific assessment frameworks \newline
+                        (i.e. ISO 14040-14044, GHG Protocol, ILCD Handbook, ISO 14067, CDP, GRI, SBTi, PEF/OEF, ESG)
+                    &
+                        test
+                    \\
+                    \hline
+                \end{tabularx}
+                \caption{Inclusion Criteria}
+            \end{table}
+
+\newpage
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
