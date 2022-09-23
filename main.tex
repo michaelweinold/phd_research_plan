@@ -27,9 +27,8 @@
     \lstset{
         backgroundcolor=\color{verbgray},
         frame=single,
-        framerule=0pt,
         basicstyle=\ttfamily,
-        columns=fullflexible,
+        %columns=fullflexible,
         xleftmargin=0cm,
     }
 }{}
@@ -130,42 +129,14 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         \subsubsection{Inclusion/Exclusion Criteria}
         \label{subsub_inclusion_exclusion}
         
-            \begin{enumerate}
-                \item LCA specific to (sustainable) aviation
-                \begin{enumerate}[label*=\arabic*]
-                    \item LCA used as primary method of investigation
-                    \item LCA XXX no catering etc.
-                \end{enumerate}
-            \end{enumerate}
+            
+
         
             \begin{table}[htbp]
                 \centering
                 \begin{tabularx}{\textwidth}{| X | X |}
                     \hline
-                \multicolumn{2}{|l|}{(1.1) LCA specific to (sustainable) aviation}  \\
-                    \hline
-                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
-                    \hline
-                        LCA used as primary method  \newline
-                    &
-                        LCA target domain too specific \newline (e.g. "aviation catering") \newline
-                        fuel input too specific \newline (e.g. "bioethanol production from expired cookies") \newline
-                        journal subject ares in social sciences \newline
-                        journal subject area in life sciences
-                    \\
-                    \hline
-                \multicolumn{2}{|l|}{(1.2) hybrid LCA specific to (sustainable) aviation}  \\
-                    \hline
-                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
-                    \hline
-                        hybrid LCA used as primary method  \newline
-                    &
-                        all exclusion criteria applied in (1.1) \newline
-                        primary focus on hybrid-electric propulsion \newline
-                        (e.g. "Feasibility Study of Hybrid Propulsion")
-                    \\
-                    \hline
-                \multicolumn{2}{|l|}{(2.1) hybrid LCA methods}  \\
+                \multicolumn{2}{|l|}{\textbf{(F1.1) Hybrid LCA methods}}  \\
                     \hline
                     \textit{inclusion criteria} & \textit{exclusion criteria} \\
                     \hline
@@ -181,7 +152,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
                         journal subject area in life sciences
                     \\
                     \hline
-                \multicolumn{2}{|l|}{(2.2) hybrid LCA methods}  \\
+                \multicolumn{2}{|l|}{\textbf{(F2.2) Prospective hybrid LCA methods}}  \\
                     \hline
                     \textit{inclusion criteria} & \textit{exclusion criteria} \\
                     \hline
@@ -191,7 +162,30 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
                         all exclusion criteria applied in (2.1)
                     \\
                     \hline
-                \multicolumn{2}{|l|}{(3.1) impact of different GHG standards/implementations in LCA}  \\
+                \multicolumn{2}{|l|}{\textbf{(F2.1) LCA specific to (sustainable) aviation}}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        LCA used as primary method  \newline
+                    &
+                        LCA target domain too specific \newline (e.g. "aviation catering") \newline
+                        fuel input too specific \newline (e.g. "bioethanol production from expired cookies") \newline
+                        journal subject ares in social sciences \newline
+                        journal subject area in life sciences
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{\textbf{(F2.2) hybrid LCA specific to (sustainable) aviation}}  \\
+                    \hline
+                    \textit{inclusion criteria} & \textit{exclusion criteria} \\
+                    \hline
+                        hybrid LCA used as primary method  \newline
+                    &
+                        all exclusion criteria applied in (1.1) \newline
+                        primary focus on hybrid-electric propulsion \newline
+                        (e.g. "Feasibility Study of Hybrid Propulsion")
+                    \\
+                    \hline
+                \multicolumn{2}{|l|}{\textbf{(F3.1) Impact of different GHG standards/implementations in LCA}}  \\
                     \hline
                     \textit{inclusion criteria} & \textit{exclusion criteria} \\
                     \hline
@@ -203,17 +197,18 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
                     \\
                     \hline
                 \end{tabularx}
-                \caption{Inclusion and exclusion criteria for systematic literature review. Where applicable and possible, these were translated to a boolean search logic. Compare also table \ref{tab_bool}. The list of relevant subject areas was compiled by collecting metadata of false positive search results.}
+                \caption{Inclusion and exclusion criteria for systematic literature review. Where applicable and possible, these were translated to a Boolean search logic. Compare also section \ref{sub_boolean}. The list of relevant subject areas was compiled by collecting metadata of false positive search results.}
                 \label{tab_inclusion_exclusion}
             \end{table}
     
     \subsubsection{Boolean Search Logic}
     \label{sub_boolean}
         
-        Note that all upper case strings indicate search operators, all lower case strings indicate search terms. Compare the \textit{Scopus Advanced Search} documentation for a list of operator precedence and syntax definitions \footnote{\url{https://service.elsevier.com/app/answers/detail/a_id/11365/}}.
+        Note that all upper case strings indicate search operators, all lower case strings indicate search terms. Compare the \textit{Scopus Advanced Search} documentation for a list of operator precedence and syntax definitions \footnote{\url{https://service.elsevier.com/app/answers/detail/a_id/11365/}}. For the inclusion and exclusion considerations that informed the logic, compare table \ref{tab_inclusion_exclusion}.
         
-        \paragraph{(F1) Hybrid LCA methods}
-            
+        \paragraph{(F1.1) Hybrid LCA methods}
+        \ % required for listings to work with \paragraph{}
+        
 \begin{code_search}
 TITLE-ABS-KEY(
     {hybrid life-cycle assessment}
@@ -228,7 +223,7 @@ AND SUBJAREA(
 )
 \end{code_search}
 
-Incorporating more terms specific to the problem of hybrid life-cycle assessment from the inclusion/exclusion list, this can be adapted to:
+Incorporating more terms specific to the problem of hybrid life-cycle assessment from the inclusion/exclusion list in table \ref{tab_inclusion_exclusion}, this can be adapted to:
 
 \begin{code_search}
 TITLE-ABS-KEY(
@@ -247,8 +242,9 @@ AND SUBJAREA(
 )
 \end{code_search}
 
-        \subsubsection{(F2) Prospective (hybrid) LCA methods}
-
+        \paragraph{(F1.2) Prospective (hybrid) LCA methods}
+        \ % required for listings to work with \paragraph{}
+        
 \begin{code_search}
 TITLE-ABS-KEY(
     {life-cycle assessment}
@@ -266,8 +262,8 @@ AND SUBJAREA(
 )
 \end{code_search}
 
-        \subsubsection{(F3) LCA specific to (sustainable) aviation}
-
+        \paragraph{(F2.1) LCA specific to (sustainable) aviation}
+        \ % required for listings to work with \paragraph{}
             
 \begin{code_search}
 TITLE-ABS-KEY(
@@ -285,32 +281,45 @@ AND SUBJAREA(
     ECON OR BUSI OR SOCI
 )
 \end{code_search}
-            
-            (2.2) prospective (hybrid) LCA methods
-            
 
-            \begin{table}[htbp]
-                \centering
-                \begin{tabularx}{\textwidth}{| X | X |}
-                    \hline
-                    \textit{field of research} & \textit{search logic} \\
-                    \hline
-                    (1.1) LCA specific to (sustainable) aviation & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (1.2) hybrid LCA specific to (sustainable) aviation &  \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (2.1) hybrid LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (2.2) prospective (hybrid) LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (3.1) impact of different GHG standards/implementations in LCA & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                \end{tabularx}
-                \caption{Boolean search logic for the different fields of research considered in this work. For the inclusion and exclusion considerations that informed the logic, compare table \ref{tab_inclusion_exclusion}.}
-                \label{tab_bool}
-            \end{table}
+
+        \paragraph{(F2.2) Hybrid LCA specific to (sustainable) aviation}
+        \ % required for listings to work with \paragraph{}
             
-        
+\begin{code_search}
+TITLE-ABS-KEY(
+    {hybrid life-cycle assessment}
+    OR
+    {hybrid life cycle assessment}
+    OR plca OR *mrio* or eeio
+)
+AND TITLE-ABS-KEY(
+    aviation OR {air transport}
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
+    ECON OR BUSI OR SOCI
+)
+\end{code_search}
+
+        \paragraph{(F3.1) Impact of different GHG standards/implementations in LCA}
+        \ % required for listings to work with \paragraph{}
+
+\begin{code_search}
+TITLE-ABS-KEY(
+    {hybrid life-cycle assessment}
+    OR
+    {hybrid life cycle assessment}
+    OR plca OR *mrio* or eeio
+)
+AND TITLE-ABS-KEY(
+    aviation OR {air transport}
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
+    ECON OR BUSI OR SOCI
+)
+\end{code_search}
 
 \newpage
 
