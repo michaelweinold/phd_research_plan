@@ -14,12 +14,26 @@
 % fonts
 \usepackage{amsfonts}
 \usepackage{microtype}
+% color
+\usepackage{color}
+\definecolor{verbgray}{gray}{0.9}
 % figures
 \usepackage{graphicx}
 % enumeration
 \usepackage{enumitem}
-
-
+% code
+\usepackage{listings} % https://tex.stackexchange.com/a/53951
+\lstnewenvironment{code_search}{
+    \lstset{
+        backgroundcolor=\color{verbgray},
+        frame=single,
+        framerule=0pt,
+        basicstyle=\ttfamily,
+        columns=fullflexible,
+        xleftmargin=0cm,
+    }
+}{}
+\setcounter{secnumdepth}{5}
 
 \title{Life-Cycle Assessment for Sustainable Aviation}
 
@@ -111,32 +125,10 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 
     \subsection{Details of Systematic Literature Review Methodology}
     
-        This work uses the \textit{SALSA} (\textbf{S}earch, \textbf{A}ppraisa\textbf{L}, \textbf{S}ynthesis, \textbf{A}nalysis) framework rationalization introduced by Grant et al. \cite{grant_typology_2009}. Search was 
-    
-        \subsubsection{Boolean Search Logic}
-
-            \begin{table}[htbp]
-                \centering
-                \begin{tabularx}{\textwidth}{| X | X |}
-                    \hline
-                    \textit{field of research} & \textit{search logic} \\
-                    \hline
-                    (1.1) LCA specific to (sustainable) aviation & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (1.2) hybrid LCA specific to (sustainable) aviation &  \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (2.1) hybrid LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (2.2) prospective (hybrid) LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                    (3.1) impact of different GHG standards/implementations in LCA & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
-                    \hline
-                \end{tabularx}
-                \caption{Boolean search logic for the different fields of research considered in this work. For the inclusion and exclusion considerations that informed the logic, compare table \ref{tab_inclusion_exclusion}.}
-                \label{tab_bool}
-            \end{table}
-            
+        The \textit{SALSA} (\textbf{S}earch, \textbf{A}ppraisa\textbf{L}, \textbf{S}ynthesis, \textbf{A}nalysis) framework rationalization introduced by Grant et al. \cite{grant_typology_2009} was utlized in the context of the systematic literature review. Search was conducted through the \textit{Elsevier Scopus Advanced Search} engine \footnote{\url{https://www.scopus.com/search/form.uri?display=advanced}}. Out of the small body of search engines supporting Boolean queries, it was chosen over \textit{Dimensions} \footnote{\url{https://app.dimensions.ai/discover/publication}} and \textit{The Lens} \footnote{\url{https://www.lens.org/lens/search/scholar/structured}} for its ease of use and larger body of indexed publications. Inclusion and exclusion criteria listed in section \ref{subsub_inclusion_exclusion} were used to contruct Boolean search queries listed in section \ref{sub_boolean} to significantly narrow the scope of publications for appraisal. 
+        
         \subsubsection{Inclusion/Exclusion Criteria}
+        \label{subsub_inclusion_exclusion}
         
             \begin{enumerate}
                 \item LCA specific to (sustainable) aviation
@@ -211,9 +203,114 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
                     \\
                     \hline
                 \end{tabularx}
-                \caption{Inclusion and exclusion criteria for systematic literature review. Where applicable and possible, these were translated to a boolean search logic. Compare also table \ref{tab_bool}.}
+                \caption{Inclusion and exclusion criteria for systematic literature review. Where applicable and possible, these were translated to a boolean search logic. Compare also table \ref{tab_bool}. The list of relevant subject areas was compiled by collecting metadata of false positive search results.}
                 \label{tab_inclusion_exclusion}
             \end{table}
+    
+    \subsubsection{Boolean Search Logic}
+    \label{sub_boolean}
+        
+        Note that all upper case strings indicate search operators, all lower case strings indicate search terms. Compare the \textit{Scopus Advanced Search} documentation for a list of operator precedence and syntax definitions \footnote{\url{https://service.elsevier.com/app/answers/detail/a_id/11365/}}.
+        
+        \paragraph{(F1) Hybrid LCA methods}
+            
+\begin{code_search}
+TITLE-ABS-KEY(
+    {hybrid life-cycle assessment}
+    OR
+    {hybrid life cycle assessment}
+)
+AND TITLE-ABS-KEY(
+    *mrio* or *plca*
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
+)
+\end{code_search}
+
+Incorporating more terms specific to the problem of hybrid life-cycle assessment from the inclusion/exclusion list, this can be adapted to:
+
+\begin{code_search}
+TITLE-ABS-KEY(
+    {life-cycle assessment}
+    OR
+    {life cycle assessment}
+)
+AND TITLE-ABS-KEY(
+    *mrio* or *plca* or eeio or hlca
+)
+AND TITLE-ABS-KEY(
+    {truncation} or {double counting} or {double-counting}
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
+)
+\end{code_search}
+
+        \subsubsection{(F2) Prospective (hybrid) LCA methods}
+
+\begin{code_search}
+TITLE-ABS-KEY(
+    {life-cycle assessment}
+    OR
+    {life cycle assessment}
+)
+AND TITLE-ABS-KEY(
+    *mrio* or *plca* or eeio or hlca
+)
+AND TITLE-ABS-KEY(
+    prospect*
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
+)
+\end{code_search}
+
+        \subsubsection{(F3) LCA specific to (sustainable) aviation}
+
+            
+\begin{code_search}
+TITLE-ABS-KEY(
+    {life-cycle assessment}
+    OR
+    {life cycle assessment}
+    OR
+    {lca}
+)
+AND TITLE-ABS-KEY(
+    sustainable W/3 aviation
+)
+AND SUBJAREA(
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
+    ECON OR BUSI OR SOCI
+)
+\end{code_search}
+            
+            (2.2) prospective (hybrid) LCA methods
+            
+
+            \begin{table}[htbp]
+                \centering
+                \begin{tabularx}{\textwidth}{| X | X |}
+                    \hline
+                    \textit{field of research} & \textit{search logic} \\
+                    \hline
+                    (1.1) LCA specific to (sustainable) aviation & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (1.2) hybrid LCA specific to (sustainable) aviation &  \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (2.1) hybrid LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (2.2) prospective (hybrid) LCA methods & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                    (3.1) impact of different GHG standards/implementations in LCA & \texttt{("life cycle assessment" OR "life-cycle assessment") AND ("aviation" OR "sustainable aviation")} \\
+                    \hline
+                \end{tabularx}
+                \caption{Boolean search logic for the different fields of research considered in this work. For the inclusion and exclusion considerations that informed the logic, compare table \ref{tab_inclusion_exclusion}.}
+                \label{tab_bool}
+            \end{table}
+            
+        
 
 \newpage
 
