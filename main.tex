@@ -21,6 +21,8 @@
 \usepackage{graphicx}
 % enumeration
 \usepackage{enumitem}
+% embedd pdf files
+\usepackage{pdfpages}
 % code
 \usepackage{listings} % https://tex.stackexchange.com/a/53951
 \lstnewenvironment{code_search}{
@@ -68,6 +70,9 @@ pdfauthor={Michael Weinold},
 }
 
 \begin{document}
+
+\includepdf[pages=-]{attachments/research_plan_form.pdf}
+
 \maketitle
 
 \begin{abstract}
@@ -83,7 +88,7 @@ how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
 
     Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive enironmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
     
-    However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the aclculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
+    However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the calculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
 
 \section{Hybrid Life Cycle Assessment}
 
@@ -276,6 +281,8 @@ TITLE-ABS-KEY(
     {hybrid life-cycle}
     OR
     {hybrid life cycle}
+    OR
+    {hybrid LCA}
 )
 AND TITLE-ABS-KEY(
     *mrio* or *plca* or eeio or hlca
@@ -283,21 +290,9 @@ AND TITLE-ABS-KEY(
 AND TITLE-ABS-KEY(
     {truncation} or {double counting} or {double-counting}
 )
-\end{code_search}
-
-Considering also publications in the area of life-cycle inventory analysis and incorporating more terms specific to the problem of hybrid life-cycle assessment from the inclusion/exclusion list in table \ref{tab_inclusion_exclusion}, this can be adapted to:
-
-\begin{code_search}
-TITLE-ABS-KEY(
-    {life-cycle}
-    OR
-    {life cycle}
-)
-AND TITLE-ABS-KEY(
-    inventory
-)
 AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
+    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
+    ECON OR BUSI OR SOCI
 )
 \end{code_search}
 
@@ -306,12 +301,11 @@ AND SUBJAREA(
         
 \begin{code_search}
 TITLE-ABS-KEY(
-    {life-cycle assessment}
+    {hybrid life-cycle}
     OR
-    {life cycle assessment}
-)
-AND TITLE-ABS-KEY(
-    *mrio* or *plca* or eeio or hlca
+    {hybrid life cycle}
+    OR
+    {hybrid LCA}
 )
 AND TITLE-ABS-KEY(
     prospect*
@@ -340,7 +334,6 @@ AND SUBJAREA(
     ECON OR BUSI OR SOCI
 )
 \end{code_search}
-
 
         \paragraph{(F2.2) Hybrid LCA specific to (sustainable) aviation}
         \ % required for listings to work with \paragraph{}
