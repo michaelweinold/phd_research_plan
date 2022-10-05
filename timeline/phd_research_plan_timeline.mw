@@ -9,6 +9,8 @@ dateFormat: d/M/y
 #LCA: green
 #aviation: blue
 #admin: white
+#coding: yellow
+#wiser: red
 
 // administrative
 
@@ -26,7 +28,7 @@ section Research Group Events
 
 section Conferences
 // conferences etc.
-🇨🇭
+
     // life-cycle assessment & industrial ecology
     19/09/2022 - 21/09/2022: ISIE SEM 🇦🇹 #LCA
     26/09/2022 - 30/09/2022: Brightcon 2022 🇱🇺 #LCA
@@ -40,5 +42,18 @@ section Conferences
     19/04/2023 - 22/04/2023: Aero Friedrichshafen 🇩🇪 #aviation
     20/06/2023 - 22/06/2023: Sustainable Aviation Futures 🇳🇱 #aviation
 
-    // WISER deliverables
+    // maths, coding, methods, etc.
+    29/08/2022 - 01/09/2022: EuroSciPy 🇨🇭 #coding
 
+section WISER
+// WISER deliverables
+
+12/2022: Progress Report Y1 #wiser
+12/2023: Progress Report Y2 #wiser
+12/2024: Progress Report Y3 #wiser
+12/2025: Progress Report Y4 #wiser
+
+12/2022: ⚠️ Deadline Documentation Release #wiser
+01/2024: ⚠️ Deadline Mid-Term Review WISER #wiser
+06/2024: ⚠️ Deadline SP2/SP1 API Integration #wiser
+01/2025: ⚠️ Deadline Webservice SP2 #wiser
