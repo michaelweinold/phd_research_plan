@@ -1,5 +1,5 @@
 title: Research Plan (Michael Weinold)
-description: bananas
+description: ℹ️ working document for the doctoral reseach plan
 view: *@ethz.ch, *@psi.ch // works only with subscription
 
 // settings
@@ -10,7 +10,10 @@ dateFormat: d/M/y
 #aviation: blue
 #admin: white
 #coding: yellow
-#wiser: red
+#deadline: red
+#wiser: orange
+#research: purple
+#publication: cyan
 
 // administrative
 
@@ -48,12 +51,27 @@ section Conferences
 section WISER
 // WISER deliverables
 
-12/2022: Progress Report Y1 #wiser
-12/2023: Progress Report Y2 #wiser
-12/2024: Progress Report Y3 #wiser
-12/2025: Progress Report Y4 #wiser
+12/2022: Progress Report Y1 #deadline
+12/2023: Progress Report Y2 #deadline
+12/2024: Progress Report Y3 #deadline
+12/2025: Progress Report Y4 #deadline
 
-12/2022: ⚠️ Deadline Documentation Release #wiser
-01/2024: ⚠️ Deadline Mid-Term Review WISER #wiser
-06/2024: ⚠️ Deadline SP2/SP1 API Integration #wiser
-01/2025: ⚠️ Deadline Webservice SP2 #wiser
+12/2022: ⚠️ Deadline Documentation Release #deadline
+01/2024: ⚠️ Deadline Mid-Term Review WISER #deadline
+06/2024: ⚠️ Deadline SP2/SP1 API Integration #deadline
+01/2025: ⚠️ Deadline Webservice SP2 #deadline
+
+section Brightway
+
+2023: test @test
+08/2022 - 12/2022: Brightway Documentation Upgrade #coding
+
+section Research
+
+07/2022 - 08/2022: LCA Literature Review
+10/2022 - 12/2022: GHG Assessment Standards Comparison #research
+
+section Publications
+
+09/2022 - 10/2022: Research Plan #admin
+11/2022 - 12/2022: GHG Assessment Standards Comparison #publication
