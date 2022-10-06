@@ -13,7 +13,8 @@ dateFormat: d/M/y
 #deadline: red
 #wiser: orange
 #research: purple
-#publication: cyan
+#publication: #36BAD4
+#documentation: #B26A5A
 
 // administrative
 
@@ -63,12 +64,16 @@ section WISER
 
 section Brightway
 
-2023: test @test
-08/2022 - 12/2022: Brightway Documentation Upgrade #coding
+15/08/2022 - 09/2022: pylcaio Integration #coding
+10/2022 - 12/2022: pylcaio Integration #coding
+01/2023 - 04/2023: bw_hybrid Integration Testing #coding
+01/2023 - 07/2023: bw_hybrid Write-Up #publication 
+15/09/2022 - 12/2022: Brightway Documentation Upgrade #documentation
+07/2023 - 12/2023: SP2/SP1 API Documentation #documentation
 
 section Research
 
-07/2022 - 08/2022: LCA Literature Review
+07/2022 - 08/2022: LCA Literature Review #research
 10/2022 - 12/2022: GHG Assessment Standards Comparison #research
 
 section Publications
