@@ -64,17 +64,28 @@ section WISER
 
 section Brightway
 
-15/08/2022 - 09/2022: pylcaio Integration #coding
-10/2022 - 12/2022: pylcaio Integration #coding
-01/2023 - 04/2023: bw_hybrid Integration Testing #coding
-01/2023 - 07/2023: bw_hybrid Write-Up #publication 
+15/08/2022 - 09/2022: "pylcaio" Integration #coding
+10/2022 - 12/2022: "pylcaio" Integration #coding
+01/2023 - 04/2023: "bw_hybrid" Integration Testing #coding #pylcaio
+01/2023 - 07/2023: "bw_hybrid" Write-Up #publication 
 15/09/2022 - 12/2022: Brightway Documentation Upgrade #documentation
 07/2023 - 12/2023: SP2/SP1 API Documentation #documentation
 
+01/2024-06/2024: API integration #coding
+07/2024-01/2025: "Brightway3" Upgrades #coding
+
+// things to add:
+1. potential msc thesis supervision (1-2), potentially related to GIS
+2. aviation related stuff
+
 section Research
 
-07/2022 - 08/2022: LCA Literature Review #research
-10/2022 - 12/2022: GHG Assessment Standards Comparison #research
+07/2022 - 08/2022: 📄 LCA Literature Review #research
+10/2022 - 12/2022: 📄 GHG Assessment Standards Comparison #research
+
+01/01/2025 - 01/01/2026: 📄 Hybrid LCA of Sust. Aviation #research
+01/01/2023 - 01/10/2023: 📄 LCI Hybridization #research
+01/01/2026 - 01/07/2026: 📄 Write-Up (Buffer) #research
 
 section Publications
 
