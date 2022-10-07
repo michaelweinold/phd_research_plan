@@ -188,14 +188,19 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
     As per October 2022, the following sub-tasks have been started and/or successfully completed:
     
     \begin{enumerate}
-        \item collection of input/output databases for hybridization
+        \item Collection and initial assessment of input/output databases and supply chain information for hybridization. This includes the following databases: \texttt{Exiobase}, \texttt{IEDC}, \texttt{global-fossil-fuel-supply-chain}\footnote{\url{https://github.com/Lkruitwagen/global-fossil-fuel-supply-chain/}}
         \item
             Implementation of \texttt{pylcaio} and \texttt{pymrio} functionality in \texttt{Brightway}.
             \begin{enumerate}
-                \item Platform independent testing and debugging setup of \texttt{ecospold2matrix}, \texttt{pymrio}, \texttt{pylcaio}.
+                \item
+                    Platform independent testing and debugging setup of \texttt{ecospold2matrix}, \texttt{pymrio}, \texttt{pylcaio} \footnote{\url{https://github.com/michaelweinold/bw_hybrid/blob/master/dev/notebooks/1_0_pylcaio_debugging.ipynb}}.
+                \item
+                    Performance assessment and improvement of existing matrix manipulation and multipilcation algorithms (compare figure \ref{fig:performance}).
+                \item
+                    Detailed development plan for the refactoring, documentation and implementation of \texttt{pylcaio} functionality in \texttt{Brightway} \footnote{\url{https://github.com/michaelweinold/bw_hybrid/tree/master/.markwhen}}
             \end{enumerate}
         \item
-            Migration and upgrade of the existing \texttt{Brightway} API documentation to \texttt{Jupyter Book} \footnote{\url{https://github.com/brightway-lca/brightway-training}} (with \texttt{Thebe} integration) \footnote{\url{https://github.com/brightway-lca/brightway-training/issues/1}} and \texttt{Sphinx} via \url{readthedocs.org}.  \footnote{\url{https://github.com/brightway-lca/brightway-documentation}}. This ensures compliance with the  \textit{Diataxis} documentation framework \footnote{\url{https://diataxis.fr/}}. User-oriented documentation and training materials are now interactive, facilitating . Status: working prototypes completed as part of the \textit{Brightcon 2022} Hackathon \footnote{\url{https://2022.brightcon.link/}}.
+            Migration and upgrade of the existing \texttt{Brightway} API documentation to \texttt{Jupyter Book} \footnote{\url{https://github.com/brightway-lca/brightway-training}} (with \texttt{Thebe} integration) \footnote{\url{https://github.com/brightway-lca/brightway-training/issues/1}} and \texttt{Sphinx} via \url{readthedocs.org}.  \footnote{\url{https://github.com/brightway-lca/brightway-documentation}}. This ensures compliance with the  \textit{Diataxis} documentation framework \footnote{\url{https://diataxis.fr/}}. User-oriented documentation and training materials are now interactive, facilitating. Status: working prototypes completed as part of the \textit{Brightcon 2022} Hackathon \footnote{\url{https://2022.brightcon.link/}}. Further improvements (as part of WISER) pending involvement of external technical writer.
         \item
             Upgrade of \texttt{Brighway} packaging/delivery from \texttt{PyPi} to \texttt{Conda-Forge} to enable platform-specific dependencies \footnote{\url{https://github.com/brightway-lca/brightway2/issues/47}}. This enables user-friendly setup on macOS running on M1 processors with AArch64 ("ARM64") architecture \footnote{\url{https://github.com/brightway-lca/brightway2/issues/46}}. Previously, platform-specific sparse linear algebra solvers required high levels of user intervention during setup with high failure rates \footnote{\url{https://github.com/LCA-ActivityBrowser/activity-browser/issues/705}}. Status: New setup tested, respective GitHub issues closed. Merge of \texttt{conda} recipes into the \texttt{conda-forge} repository completed for first core packages, other packages pending.
     \end{enumerate}
@@ -207,6 +212,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 	\label{fig:performance}
 \end{figure}
 
+\newpage
 \section{Work Packages}
 
 
