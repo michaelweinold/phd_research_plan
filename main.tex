@@ -193,7 +193,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
             Implementation of \texttt{pylcaio} and \texttt{pymrio} functionality in \texttt{Brightway}.
             \begin{enumerate}
                 \item
-                    Platform independent testing and debugging setup of \texttt{ecospold2matrix}, \texttt{pymrio}, \texttt{pylcaio} \footnote{\url{https://github.com/michaelweinold/bw_hybrid/blob/master/dev/notebooks/1_0_pylcaio_debugging.ipynb}}.
+                    Platform independent testing and debugging setup of \texttt{ecospold2matrix}, \texttt{pymrio}, \texttt{pylcaio} \footnote{\url{https://github.com/michaelweinold/bw_hybrid/blob/master/dev/notebooks}}.
                 \item
                     Performance assessment and improvement of existing matrix manipulation and multipilcation algorithms (compare figure \ref{fig:performance}).
                 \item
@@ -208,14 +208,16 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/performance.png}
-	\caption{Average runtime of different sparse matrix row-wise manipulation algorithms operating on two different matrices. The most efficient algorithm (\textit{"data mask"}) achieves a runtime improvement of three orders of magnitude over the current implementation in \texttt{pylcaio}. Measured using \texttt{\%timeit} (number of loops determined automatically, dependent on convergence of measurement results) under Python 3.10. on an Apple M1 Max platform with 32GB RAM \cite{weinold_github_2022}.}
+	\caption{Average runtime of different sparse matrix row-wise manipulation algorithms operating on two different matrices. The most efficient algorithm (\textit{"data mask"}) achieves a runtime improvement of three orders of magnitude over the current implementation in \texttt{pylcaio}. Similar improvements are expected for other parts of the hybridization, based on the current understanding of the code. An overall improvement of at least one, possibly two orders of magnitude Measured using \texttt{\%timeit} (number of loops determined automatically, dependent on convergence of measurement results) under Python 3.10. on an Apple M1 Max platform with 32GB RAM \cite{weinold_github_2022}.}
 	\label{fig:performance}
 \end{figure}
 
 \newpage
 \section{Work Packages}
 
+\section{Time Schedule}
 
+The proposed schedule associated with this research plan can be viewed interactively at \textit{markwhen} \footnote{\url{https://markwhen.com/michaelweinold/research_plan}}. The underlying file is part of the repository containing this document \footnote{\url{https://github.com/michaelweinold/phd_research_plan/blob/master/timeline/phd_research_plan_timeline.mw}}
 
 \newpage
 \section{Appendix}
