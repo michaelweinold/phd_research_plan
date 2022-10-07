@@ -5,7 +5,6 @@
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 % cross-referencing
 \usepackage{hyperref}
-\usepackage{url} 
 % tables
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -73,7 +72,6 @@ pdfauthor={Michael Weinold},
 \begin{document}
 
 \includepdf[pages=-]{attachments/research_plan_flat.pdf}
-\includepdf[pages=-]{attachments/phd_job_description.pdf}
 
 \maketitle
 
@@ -81,6 +79,8 @@ pdfauthor={Michael Weinold},
 	\cite{becattini_role_2021}
 \end{abstract}
 
+Attachments:
+WISER timeline, WISER sub-project 2 description
 
 \section{Introduction}
 
@@ -123,7 +123,6 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 \newpage
 \section{Systematic Literature Review}
 
-    
 
     \subsection{Hybrid LCA}
         
@@ -182,6 +181,37 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         \end{table}
 
     \subsection{Life-Cycle Assessment of (Sustainable) Aviation}
+
+\newpage
+\section{Progress to Date}
+
+    As per October 2022, the following sub-tasks have been started and/or successfully completed:
+    
+    \begin{enumerate}
+        \item collection of input/output databases for hybridization
+        \item
+            Implementation of \texttt{pylcaio} and \texttt{pymrio} functionality in \texttt{Brightway}.
+            \begin{enumerate}
+                \item Platform independent testing and debugging setup of \texttt{ecospold2matrix}, \texttt{pymrio}, \texttt{pylcaio}.
+            \end{enumerate}
+        \item
+            Migration and upgrade of the existing \texttt{Brightway} API documentation to \texttt{Jupyter Book} \footnote{\url{https://github.com/brightway-lca/brightway-training}} (with \texttt{Thebe} integration) \footnote{\url{https://github.com/brightway-lca/brightway-training/issues/1}} and \texttt{Sphinx} via \url{readthedocs.org}.  \footnote{\url{https://github.com/brightway-lca/brightway-documentation}}. This ensures compliance with the  \textit{Diataxis} documentation framework \footnote{\url{https://diataxis.fr/}}. User-oriented documentation and training materials are now interactive, facilitating . Status: working prototypes completed as part of the \textit{Brightcon 2022} Hackathon \footnote{\url{https://2022.brightcon.link/}}.
+        \item
+            Upgrade of \texttt{Brighway} packaging/delivery from \texttt{PyPi} to \texttt{Conda-Forge} to enable platform-specific dependencies \footnote{\url{https://github.com/brightway-lca/brightway2/issues/47}}. This enables user-friendly setup on macOS running on M1 processors with AArch64 ("ARM64") architecture \footnote{\url{https://github.com/brightway-lca/brightway2/issues/46}}. Previously, platform-specific sparse linear algebra solvers required high levels of user intervention during setup with high failure rates \footnote{\url{https://github.com/LCA-ActivityBrowser/activity-browser/issues/705}}. Status: New setup tested, respective GitHub issues closed. Merge of \texttt{conda} recipes into the \texttt{conda-forge} repository completed for first core packages, other packages pending.
+    \end{enumerate}
+
+    1. collected databases for hybridization
+    2. started refactoring and rewriting the pylcaio code
+        2.1. improved memory and computational performance
+        2.2. improved documentation
+    3. started upgrading the Brightway documentation
+    4. started adapting the Brightway computational engine to ARM64 (M1) processors
+    5. literature review and collection of LCA studies in aviation
+    6. 
+
+\section{Work Packages}
+
+
 
 \newpage
 \section{Appendix}
@@ -379,5 +409,7 @@ AND SUBJAREA(
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
+
+\includepdf[pages=-]{attachments/phd_job_description.pdf}
 
 \end{document}
