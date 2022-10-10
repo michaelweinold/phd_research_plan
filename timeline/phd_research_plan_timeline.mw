@@ -30,18 +30,20 @@ section 📃 Administrative
 section ⚠️ WISER Deliverables
 // WISER deliverables
 
-11/2022: Deadline Documentation Release #deadline
+07/2022: (Original) Deadline GHG Standards Toolbox #deadline
+02/2023: (Proposed) Deadline GHG Standards Toolbox #deadline
+10/2022: (Original) Deadline Documentation Release (WP2.1) #deadline
+01/2023: (Proposed) Deadline Documentation Release (WP2.1) #deadline
+12/2022: (Original) Deadline GHG Standards Analysis (WP2.2) #deadline
 12/2022: Progress Report Y1 #deadline
 12/2023: Progress Report Y2 #deadline
-01/2024: Deadline Mid-Term Review WISER #deadline
-06/2024: Deadline SP2/SP1 API Integration #deadline
+01/2024: ⚠️ Deadline Mid-Term Review WISER #deadline
+06/2024: Deadline SP2/SP1 API Integration (WP2.3) #deadline
+01/2025: Deadline SP2 Webservice (WP2.4) #deadline
 12/2024: Progress Report Y3 #deadline
-01/2025: Deadline Webservice SP2 #deadline
 12/2025: Progress Report Y4 #deadline
 
-// things to add:
-1. potential msc thesis supervision (1-2), potentially related to GIS
-2. aviation related stuff
+// WORK PACKAGES ####################################################################################################
 
 group WP1.1 (Hybrid LCI Integration), 12 months
 
@@ -50,37 +52,48 @@ group WP1.1 (Hybrid LCI Integration), 12 months
 01/2023 - 04/2023: "bw_hybrid" Integration Testing #coding #pylcaio
 01/2023 - 07/2023: "bw_hybrid" Write-Up #publication 
 
+group WP1.2 (Hybrid LCA Testing and Integration with Brightway), 6 months
+
+11/2022 - 03/2023: Integration Tests #coding
+02/2023 - 05/2023: Integration with Brightway #coding
+
 group WP1.2 (Hybrid LCI Databases), 6 months
 
-2023: something to add here #coding
+03/2023 - 08/2023: Investigation of IO Databases for Hybridization #coding
+08/2023 - 05/2024: Follow-Up (potentially Uncertainty, etc.) #coding
 
-group WP1.3 (Hybrid LCA Testing), 6 months
+group WP2.1 (WISER SP2 Documentation), ca. 3 months
 
-2023: something to add here
-
-group WP2.1 (WISER SP2 Documentation), 3 months
-
-15/09/2022 - 12/2022: Brightway Documentation Upgrade #documentation
+15/09/2022 - 01/01/2023: Brightway Documentation Upgrade #documentation
+05/10/2022 - 01/11/2022: [BEP003](https://github.com/brightway-lca/enhancement-proposals/pull/20) Completion #admin
 10/2022: Completion of Task List #admin
 11/2022: Improvement of Interactivity (Thebe/Binder) #coding
+12/2022: Resolution of Build Issues #coding
+03/2023 - 12/2023: Incorporate Feedback from Stakeholders #admin
 
-group WP2.2 (WISER SP1/SP2 Documentation), 2 months
+group WP 2.2 (GHG Standards in Brightway), 6 months
 
-12/2022 - 01/2023: Add SP1 API Information #documentation
-02/2023: Incorporate Feedback from Stakeholders #admin
+01/11/2022 - 01/03/2023: GHG Standards in LCA Software Analysis #research
+01/01/2023-01/03/2023: GHG Standards in Brightway Documentaion #documentation
 
-group WP2.3 (WISER SP1/SP2 API), 9 months
+group WP2.3 (WISER SP1/SP2 API), 7 months
 
-01/2024-06/2024: API integration #coding
-07/2024-01/2025: "Brightway3" Upgrades #coding
+01/2024 - 07/2024: Add SP1/SP2 API Documentation #documentation
+02/2024 - 07/2025: "Brightway3" Upgrades #coding
+03/2024 - 06/2024: Implement SP1 API Specifications #coding
+
+group WP2.4 Brightway Webservice, 4 months
+
+08/2024 - 12/2024: Implement Brightway Webservice #coding
+10/2024 - 12/2024: Add Brightway Webservice Documentation #documentation
 
 group WP3.1 (Sust. Aviation Data Collection), 6 months
 
-01/01/2025 - 01/07/2025: Identify Sources of Uncertainty in LCA of Sust. Aviation #aviation
+01/01/2024 - 01/07/2024: Identify Sources of Uncertainty in LCA of Sust. Aviation #aviation
 
 group WP3.2 (Sust. Aviation Assessment), 12 months
 
-01/07/2025 - 01/07/2026: Use existing BW Tools for LCA of Sust. Aviation #aviation
+01/07/2024 - 01/07/2025: Use existing BW Tools for LCA of Sust. Aviation #aviation
 
 // PUBLICATIONS ####################################################################################################
 
