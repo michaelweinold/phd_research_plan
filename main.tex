@@ -1,6 +1,6 @@
 \documentclass{article}
 % formatting
-\usepackage{aux/style_files/arxiv}
+\usepackage{auxiliary/style_files/arxiv}
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 % cross-referencing
@@ -45,7 +45,7 @@
 
 \author{
     \href{https://orcid.org/0000-0003-4859-2650}
-    {\includegraphics[scale=0.06]{aux/figures/orcid.pdf}
+    {\includegraphics[scale=0.06]{auxiliary/figures/orcid.pdf}
     \hspace{1mm}
     Michael Weinold} \\
 	Paul Scherrer Institut\\
@@ -220,13 +220,70 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 
     \begin{table}[htbp]
         \centering
-        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
+        
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
             \hline
                 \textbf{\#} & \textbf{Work Package} & \textbf{WISER} & \textbf{Risks} & \textbf{Duration}
             \\
             \hline
         \end{tabularx}
+        
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP1.1
+            &
+                LCI Hybridization 
+            &
+                D2.6 (del. month 9) \newline D2.9 (del. month 42)
+            &
+                Affects no downstream WP
+            &
+                11 - 12 months
+            \\
+            \hline
+        \end{tabularx}
+        
     \end{table}
+    
+    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP1.1
+            &
+                LCI Hybridization 
+            &
+                D2.6 (del. month 9) \newline D2.9 (del. month 42)
+            &
+                Affects no downstream WP
+            &
+                11 - 12 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
 
     \begin{table}[htbp]
         \centering
@@ -246,29 +303,11 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         \end{tabularx}
     \end{table}
     
-Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
-
-    \begin{table}[htbp]
-        \centering
-        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
-            \hline
-                WP1.1
-            &
-                LCI Hybridization 
-            &
-                D2.6 (del. month 9) \newline D2.9 (del. month 42)
-            &
-                Affects no downstream WP
-            &
-                11 - 12 months
-            \\
-            \hline
-        \end{tabularx}
-    \end{table}
+    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
 
 \section{Time Schedule}
 
-    The proposed schedule associated with this research plan can be viewed as an interactive \textit{Markwhen}\footnote{\url{https://github.com/kochrt/markwhen}} timeline at \url{https://phd.weinold.ch/timeline}. The underlying markwhen file is under version control at \texttt{michaelweinold/phd\_research\_plan/timeline/phd\_research\_plan\_timeline.mw} as part of the repository containing this document.
+    The proposed schedule associated with this research plan can be viewed as an interactive \textit{Markwhen}\footnote{\url{https://github.com/kochrt/markwhen}} timeline at \url{https://phd.weinold.ch/timeline}.
 
 \newpage
 \section{Appendix}
