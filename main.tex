@@ -248,7 +248,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
             &
                 D2.6 (del. month 9) \newline D2.9 (del. month 42)
             &
-                Affects no downstream WP
+                Affects WP1.2 directly (go/no-go)
             &
                 11 - 12 months
             \\
@@ -257,7 +257,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         
     \end{table}
     
-    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
+    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment. \textit{Ecoinvent} and \textit{Exiobase} are in scope for hybridization in W1.1. For other databases, compare W1.3.
 
     \begin{table}[htbp]
         \centering
@@ -269,41 +269,47 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
             |>{\hsize=0.75\hsize}X|
           } % https://tex.stackexchange.com/a/249043
             \hline
-                WP1.1
+                WP1.2
             &
-                LCI Hybridization 
+                \texttt{bw\_hybrid} Integration
             &
                 D2.6 (del. month 9) \newline D2.9 (del. month 42)
             &
-                Affects no downstream WP
+                Dependent on WP1.1 (go/no-go)
             &
-                11 - 12 months
+                $\sim$ 6 months
             \\
             \hline
         \end{tabularx}
     \end{table}
     
-    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
+    Systematic setup and completion of integration and unit tests for code originating from WP1.1. Also includes relevant refactoring required for integration with \textit{Brightway3} and standards proposed in the \textit{Brightway Strategic Development Plan}. Includes 80-100\% test coverage, performance assessments of matrix operations and documentation.
 
     \begin{table}[htbp]
         \centering
-        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
             \hline
-                WP1.1
+                WP1.3
             &
-                LCI Hybridization 
+                LCI Hybridization Database Evaluation
             &
-                D2.6 (del. month 9) \newline D2.9 (del. month 42)
+                N/A
             &
                 Affects no downstream WP
             &
-                11 - 12 months
+                $\sim$ 6 months
             \\
             \hline
         \end{tabularx}
     \end{table}
     
-    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
+    Continued assessment of input-output databases for integration with existing hybridization infrastructure developed in W1.1/W1.2. Besides regional input-output databases, databases included in the \textit{Industrial Ecology Dashboard} will be considered. Higher-resolution supply chain databases will be considered.
 
 \section{Time Schedule}
 
