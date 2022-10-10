@@ -8,6 +8,7 @@
 % tables
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{multirow}
 \usepackage{caption} 
 \captionsetup[table]{skip=10pt}
 % fonts
@@ -217,11 +218,57 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 \newpage
 \section{Work Packages}
 
- 
+    \begin{table}[htbp]
+        \centering
+        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
+            \hline
+                \textbf{\#} & \textbf{Work Package} & \textbf{WISER} & \textbf{Risks} & \textbf{Duration}
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
+            \hline
+                WP1.1
+            &
+                LCI Hybridization 
+            &
+                D2.6 (del. month 9) \newline D2.9 (del. month 42)
+            &
+                Affects no downstream WP
+            &
+                11 - 12 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment.
+
+    \begin{table}[htbp]
+        \centering
+        \begin{tabularx}{\textwidth}{| l | X | X | X | l |}
+            \hline
+                WP1.1
+            &
+                LCI Hybridization 
+            &
+                D2.6 (del. month 9) \newline D2.9 (del. month 42)
+            &
+                Affects no downstream WP
+            &
+                11 - 12 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
 
 \section{Time Schedule}
 
-The proposed schedule associated with this research plan can be viewed interactively at \textit{markwhen} \footnote{\url{https://markwhen.com/michaelweinold/research_plan}}. The underlying file is part of the repository containing this document \footnote{\url{https://github.com/michaelweinold/phd_research_plan/blob/master/timeline/phd_research_plan_timeline.mw}}
+    The proposed schedule associated with this research plan can be viewed as an interactive \textit{Markwhen}\footnote{\url{https://github.com/kochrt/markwhen}} timeline at \url{https://phd.weinold.ch/timeline}. The underlying markwhen file is under version control at \texttt{michaelweinold/phd\_research\_plan/timeline/phd\_research\_plan\_timeline.mw} as part of the repository containing this document.
 
 \newpage
 \section{Appendix}
