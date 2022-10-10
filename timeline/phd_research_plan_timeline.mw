@@ -27,10 +27,71 @@ section Administrative
 01/01/2025 - 01/01/2026: Exchange (Cambridge or Oxford)
 01/07/2025 - 01/07/2026: Year 4 #admin
 
-section Other Events
-// group retreats etc.
+section WISER Deliverables
+// WISER deliverables
 
-03/10/2022 - 04/10/2022: Group Retreat (Switzerland)
+12/2022: Progress Report Y1 #deadline
+12/2023: Progress Report Y2 #deadline
+12/2024: Progress Report Y3 #deadline
+12/2025: Progress Report Y4 #deadline
+
+12/2022: ⚠️ Deadline Documentation Release #deadline
+01/2024: ⚠️ Deadline Mid-Term Review WISER #deadline
+06/2024: ⚠️ Deadline SP2/SP1 API Integration #deadline
+01/2025: ⚠️ Deadline Webservice SP2 #deadline
+
+// things to add:
+1. potential msc thesis supervision (1-2), potentially related to GIS
+2. aviation related stuff
+
+group WP1.1 (Hybrid LCI Integration), 12 months
+
+15/08/2022 - 09/2022: "pylcaio" Integration #coding
+10/2022 - 12/2022: "pylcaio" Integration #coding
+01/2023 - 04/2023: "bw_hybrid" Integration Testing #coding #pylcaio
+01/2023 - 07/2023: "bw_hybrid" Write-Up #publication 
+
+group WP1.2 (Hybrid LCI Databases), 6 months
+
+2023: something to add here #coding
+
+group WP1.3 (Hybrid LCA Testing), 6 months
+
+2023: something to add here
+
+group WP2.1 (WISER SP2 Documentation), 3 months
+
+15/09/2022 - 12/2022: Brightway Documentation Upgrade #documentation
+10/2022: Completion of Task List #admin
+11/2022: Improvement of Interactivity (Thebe/Binder) #coding
+
+group WP2.2 (WISER SP1/SP2 Documentation), 2 months
+
+12/2022 - 01/2023: Add SP1 API Information #documentation
+02/2023: Incorporate Feedback from Stakeholders #admin
+
+group WP2.3 (WISER SP1/SP2 API), 9 months
+
+01/2024-06/2024: API integration #coding
+07/2024-01/2025: "Brightway3" Upgrades #coding
+
+group WP3.1 (Sust. Aviation Data Collection), 6 months
+
+01/01/2025 - 01/07/2025: Identify Sources of Uncertainty in LCA of Sust. Aviation #aviation
+
+group WP3.2 (Sust. Aviation Assessment), 12 months
+
+01/07/2025 - 01/07/2026: Use existing BW Tools for LCA of Sust. Aviation #aviation
+
+section Research/Publ2024:022: 📄 Research Plan #admin
+11/2022 - 12/2022: 📄 GHG Assessment Standards Comparison #publication
+
+07/2022 - 08/2022: 📄 LCA Literature Review #research
+10/2022 - 12/2022: 📄 GHG Assessment Standards Comparison #research
+
+01/01/2025 - 01/01/2026: 📄 Hybrid LCA of Sust. Aviation #research
+01/01/2023 - 01/10/2023: 📄 LCI Hybridization #research
+01/01/2026 - 01/07/2026: 📄 Write-Up (Buffer) #research
 
 section Conferences
 // conferences etc.
@@ -54,43 +115,7 @@ section Conferences
     // policy and innovation studies
     15/06/2023 - 17/06/2023: Eu-SPRI 2023 Conference (🔗 MSc Thesis) 🇬🇧
 
-section WISER
-// WISER deliverables
+section Other Events
+// group retreats etc.
 
-12/2022: Progress Report Y1 #deadline
-12/2023: Progress Report Y2 #deadline
-12/2024: Progress Report Y3 #deadline
-12/2025: Progress Report Y4 #deadline
-
-12/2022: ⚠️ Deadline Documentation Release #deadline
-01/2024: ⚠️ Deadline Mid-Term Review WISER #deadline
-06/2024: ⚠️ Deadline SP2/SP1 API Integration #deadline
-01/2025: ⚠️ Deadline Webservice SP2 #deadline
-
-section Brightway
-
-15/08/2022 - 09/2022: "pylcaio" Integration #coding
-10/2022 - 12/2022: "pylcaio" Integration #coding
-01/2023 - 04/2023: "bw_hybrid" Integration Testing #coding #pylcaio
-01/2023 - 07/2023: "bw_hybrid" Write-Up #publication 
-15/09/2022 - 12/2022: Brightway Documentation Upgrade #documentation
-07/2023 - 12/2023: SP2/SP1 API Documentation #documentation
-
-01/2024-06/2024: API integration #coding
-07/2024-01/2025: "Brightway3" Upgrades #coding
-
-// things to add:
-1. potential msc thesis supervision (1-2), potentially related to GIS
-2. aviation related stuff
-
-section Research/Publications
-
-09/2022 - 10/2022: 📄 Research Plan #admin
-11/2022 - 12/2022: 📄 GHG Assessment Standards Comparison #publication
-
-07/2022 - 08/2022: 📄 LCA Literature Review #research
-10/2022 - 12/2022: 📄 GHG Assessment Standards Comparison #research
-
-01/01/2025 - 01/01/2026: 📄 Hybrid LCA of Sust. Aviation #research
-01/01/2023 - 01/10/2023: 📄 LCI Hybridization #research
-01/01/2026 - 01/07/2026: 📄 Write-Up (Buffer) #research
+03/10/2022 - 04/10/2022: Group Retreat 🇨🇭
