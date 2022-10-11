@@ -10,6 +10,7 @@
 \usepackage{tabularx}
 \usepackage{multirow}
 \usepackage{caption} 
+\usepackage{float} % for forcing placement
 \captionsetup[table]{skip=10pt}
 % fonts
 \usepackage{amsfonts}
@@ -139,7 +140,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         
         The only review of hybrid life-cycle assessment methods identified is provided by Crawford et al. in 2018 \cite{crawford_hybrid_2018}. \cite{}
         
-        \begin{table}[htbp]
+        \begin{table}[H]
             \centering
             \begin{tabularx}{\textwidth}{| X | X | X | X |}
                 \hline
@@ -218,7 +219,9 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
 \newpage
 \section{Work Packages}
 
-    \begin{table}[htbp]
+    Note that generic WISER deliverables, such as annual reports and the mid-term review, are not associated with any one work package. For a full list of WISER deliverables, compare "Subproject 2: Computation \& Assessment Toolbox" in the appendix. 
+
+    \begin{table}[H]
         \centering
         
         \begin{tabularx}{\linewidth}{
@@ -257,9 +260,9 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
         
     \end{table}
     
-    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment. \textit{Ecoinvent} and \textit{Exiobase} are in scope for hybridization in W1.1. For other databases, compare W1.3.
+    Life-cycle inventory hybridization (augmentation of foreground processes from process-based life-cycle assessment database with additional information from input-output-based database) to increase accuracy of life-cycle assessment. In scope for hybridization: \textit{Ecoinvent} and \textit{Exiobase}. For other databases, compare W1.3.
 
-    \begin{table}[htbp]
+    \begin{table}[H]
         \centering
         \begin{tabularx}{\linewidth}{
             |>{\hsize=0.25\hsize}X
@@ -285,7 +288,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
     
     Systematic setup and completion of integration and unit tests for code originating from WP1.1. Also includes relevant refactoring required for integration with \textit{Brightway3} and standards proposed in the \textit{Brightway Strategic Development Plan}. Includes 80-100\% test coverage, performance assessments of matrix operations and documentation.
 
-    \begin{table}[htbp]
+    \begin{table}[H]
         \centering
         \begin{tabularx}{\linewidth}{
             |>{\hsize=0.25\hsize}X
@@ -301,7 +304,7 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
             &
                 N/A
             &
-                Affects no downstream WP
+                Affects no other WP
             &
                 $\sim$ 6 months
             \\
@@ -310,7 +313,163 @@ How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} com
     \end{table}
     
     Continued assessment of input-output databases for integration with existing hybridization infrastructure developed in W1.1/W1.2. Besides regional input-output databases, databases included in the \textit{Industrial Ecology Dashboard} will be considered. Higher-resolution supply chain databases will be considered.
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP2.1
+            &
+                \texttt{Brightway} Documentation Upgrade
+            &
+                D2.6
+            &
+                Affects no other WP
+            &
+                3 months (core)
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Upgrade of the existing Brightway documentation in line with the \textit{Brightway Strategic Development Plan}. Release of the documentation for comment to WISER stakeholders and other sub-project leaders.
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP2.2
+            &
+                GHG Standards in \texttt{Brightway}
+            &
+                D2.5, M2.7
+            &
+                Affects no other WP
+            &
+                $\sim$ 6 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Analysis and comparison of different greenhouse gas assessment standards (carbon footprinting standards) in the Brightway life-cycle assessment software framework. This includes existing implementations and potential differences to novel implementations. Implementation of multiple nomenclature conventions. In scope for analysis: ISO 14067, PAS2050, GHG protocol (scope 1, 2 and 3).
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP2.3
+            &
+                WISER SP1/SP2 API
+            &
+                D2.7, M2.5
+            &
+                mandatory deliverable \newline affects all other SPs \newline affects WP2.4
+            &
+                $\sim$ 6 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Development of an API interface for \texttt{Brightway} to be used in conjunction with the proposed web-service. Provides an interface to the WISER API developed by sub-project 1.
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP2.4
+            &
+                \texttt{Brightway} Webservice
+            &
+                D2.8, M2.6
+            &
+                mandatory deliverable \newline affects all other SPs 
+            &
+                $\sim$ 4 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Enhancement of existing \texttt{Brightway} functionality to provide a web-service to be used as the core "computational engine" of the WISER project. This includes streamlining the setup of the packages on a virtual private server and the associated documentation (compare WP2.1). 
 
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP3.1
+            &
+                Sustainable Aviation
+            &
+                N/A
+            &
+                Affects WP3.2
+            &
+                $\sim$ 6 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Some text here
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{
+            |>{\hsize=0.25\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=1.\hsize}X
+            |>{\hsize=0.75\hsize}X|
+          } % https://tex.stackexchange.com/a/249043
+            \hline
+                WP3.2
+            &
+                Sustainable Aviation
+            &
+                N/A
+            &
+                N/A
+            &
+                $\sim$ 12 months
+            \\
+            \hline
+        \end{tabularx}
+    \end{table}
+    
+    Some text here
+    
 \section{Time Schedule}
 
     The proposed schedule associated with this research plan can be viewed as an interactive \textit{Markwhen}\footnote{\url{https://github.com/kochrt/markwhen}} timeline at \url{https://phd.weinold.ch/timeline}.
@@ -336,7 +495,7 @@ F3: PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
 \end{code_search}
 
         
-            \begin{table}[htbp]
+            \begin{table}[H]
                 \centering
                 \begin{tabularx}{\textwidth}{| X | X |}
                     \hline
