@@ -86,7 +86,7 @@ WISER timeline, WISER sub-project 2 description
 
 \section{Introduction}
 
-    
+Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. 
 
     life cycle assessment is \textit{"a tool to assess the potential environmental impacts and resources used throughout a product’s life cycle, i.e. from raw material acquisition, via production and use stages, to waste management"}\cite{noauthor_iso_2006}. Developed in the 1960s \cite{hauschild_life_2018}. 
     
@@ -103,13 +103,13 @@ WISER timeline, WISER sub-project 2 description
     
 \section{Methods}
 
-    Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. A prototype \texttt{pylcaio}\cite{noauthor_pylcaio_2022} exists .
-    
-    To conform with best practices for documenting scientific software \cite{lee_ten_2018}, matrix operations will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
+    In a first step, a systematic literature review is to be employed to identify all previous attempts at extending life-cycle inventory and avoid double counting. Associated scripts and scientific software will be collected for benchmarking.
+
+    In the next step, a scientific software package is to be developed using best practices from test-driven development \cite{XXX} as well as documentation of scientific software \cite{lee_ten_2018}. The \texttt{pylcaio}\cite{noauthor_pylcaio_2022} script by Agez et al. \cite{agez}\cite{agez} will serve as a starting point. To create the highest level of synergies, matrix operations will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature. The \texttt{Brightway} framework will serve as the computational engine of the package and serve data to XXX. To obtain high computational efficiency on cluster computing environments and alternatively enable practitioners to run calculations on consumer hardware, matrix manipulations will be be optimized. This includes matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk and conversion to compressed sparse matrix formats. ...how to move away from heuristics? 
     
     In addition, the \textit{Brightway} package constitutes the computational engine of the WISER digital ecosystem and as such XXXX and, not least of all, to conserve energy.
     
-    To obtain high computational efficiency and enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be p
+    
     
     Methods:
         software development:
