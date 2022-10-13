@@ -101,27 +101,17 @@ WISER timeline, WISER sub-project 2 description
     Bombardier published an environmental product declaration (LCA) in 2022: \cite{noauthor_challenger_2022}
     
     
+        Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. A prototype \texttt{pylcaio}\cite{noauthor_pylcaio_2022} exists .
+    
 \section{Methods}
 
-    Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. A prototype \texttt{pylcaio}\cite{noauthor_pylcaio_2022} exists .
+    To obtain the highest-accuracy prospective life-cycle assessment of sustainable aviation to date, a scientific software package for modular hybridization of life-cycle inventories is to be developed. It will enable the extension of process-based inventories, using either a tiered hybrid, path-exchange, matrix augmentation or integrated hybrid \cite{hauschild_life_2015}\cite{hauschild_life_2018}\cite{crawford_hybrid_2018} approach. To avoid double-counting of emissions, a heuristic approach based on Agez et al. \cite{agez_lifting_2019}\cite{agez_correcting_2022}\cite{agez_hybridization_2020} will be used initially. The most promising candidates for hybridization are the Ecoinvent (version 3.9) process-based inventory database and the Exiobase (version 3) input-output multi-regional environmentally extended supply-use  table and input-output table.
     
-    To conform with best practices for documenting scientific software \cite{lee_ten_2018}, matrix operations will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
+    To obtain high computational efficiency on cluster hardware but concurrently enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be implemented using appropriate packages, such as \texttt{sparse} \cite{abbasi_sparse_2018}. If applicable, legacy matrix multiplication algorithms will be optimized using novel approaches based on reinforcement learning introduced by Fawzi at al. in 2022 \cite{fawzi_discovering_2022}.
     
-    In addition, the \textit{Brightway} package constitutes the computational engine of the WISER digital ecosystem and as such XXXX and, not least of all, to conserve energy.
+    The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
     
-    To obtain high computational efficiency and enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be p
-    
-    Methods:
-        software development:
-            test driven development
-        linear algebra:
-            sparse matrices
-            sparse matrix compression algorithms
-        life-cycle assessment:
-            hybridized life-cycle inventory with a sensible method to avoid double counting
-            prospective life-cycle assessment
-        infrastructure: paralellized on PSI cluster computing hardware
-    
+    Using this toolkit, the case studies will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
 
 \section{Planned Journal Publications}
 
