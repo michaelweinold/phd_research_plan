@@ -1,4 +1,41 @@
 
+@inproceedings{abbasi_sparse_2018,
+	address = {Austin, Texas},
+	title = {Sparse: {A} more modern sparse array library},
+	shorttitle = {Sparse},
+	url = {https://conference.scipy.org/proceedings/scipy2018/hameer_abbasi.html},
+	doi = {10.25080/Majora-4af1f417-00a},
+	abstract = {This paper is about sparse multi-dimensional arrays in Python. We discuss their applications, layouts, and current implementations in the SciPy ecosystem along with strengths and weaknesses. We then introduce a new package for sparse arrays that builds on the legacy of the scipy.sparse implementation, but supports more modern interfaces, dimensions greater than two, and improved integration with newer array packages, like XArray and Dask. We end with performance benchmarks and notes on future work. Additionally, this work provides a concrete implementation of the recent NumPy array protocols to build generic array interfaces for improved interoperability, and so may be useful for broader community discussion.},
+	language = {en},
+	urldate = {2022-10-13},
+	author = {Abbasi, Hameer},
+	year = {2018},
+	pages = {65--68},
+}
+
+@article{fawzi_discovering_2022,
+	title = {Discovering faster matrix multiplication algorithms with reinforcement learning},
+	volume = {610},
+	issn = {0028-0836, 1476-4687},
+	url = {https://www.nature.com/articles/s41586-022-05172-4},
+	doi = {10.1038/s41586-022-05172-4},
+	abstract = {Abstract
+            
+              Improving the efficiency of algorithms for fundamental computations can have a widespread impact, as it can affect the overall speed of a large amount of computations. Matrix multiplication is one such primitive task, occurring in many systems—from neural networks to scientific computing routines. The automatic discovery of algorithms using machine learning offers the prospect of reaching beyond human intuition and outperforming the current best human-designed algorithms. However, automating the algorithm discovery procedure is intricate, as the space of possible algorithms is enormous. Here we report a deep reinforcement learning approach based on AlphaZero
+              1
+              for discovering efficient and provably correct algorithms for the multiplication of arbitrary matrices. Our agent, AlphaTensor, is trained to play a single-player game where the objective is finding tensor decompositions within a finite factor space. AlphaTensor discovered algorithms that outperform the state-of-the-art complexity for many matrix sizes. Particularly relevant is the case of 4 × 4 matrices in a finite field, where AlphaTensor’s algorithm improves on Strassen’s two-level algorithm for the first time, to our knowledge, since its discovery 50 years ago
+              2
+              . We further showcase the flexibility of AlphaTensor through different use-cases: algorithms with state-of-the-art complexity for structured matrix multiplication and improved practical efficiency by optimizing matrix multiplication for runtime on specific hardware. Our results highlight AlphaTensor’s ability to accelerate the process of algorithmic discovery on a range of problems, and to optimize for different criteria.},
+	language = {en},
+	number = {7930},
+	urldate = {2022-10-13},
+	journal = {Nature},
+	author = {Fawzi, Alhussein and Balog, Matej and Huang, Aja and Hubert, Thomas and Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and R. Ruiz, Francisco J. and Schrittwieser, Julian and Swirszcz, Grzegorz and Silver, David and Hassabis, Demis and Kohli, Pushmeet},
+	month = oct,
+	year = {2022},
+	pages = {47--53},
+}
+
 @article{lee_ten_2018,
 	title = {Ten simple rules for documenting scientific software},
 	volume = {14},
