@@ -58,17 +58,14 @@
 	\texttt{michael.weinold@psi.ch} \\
 }
 
-\date{28. July 2022}
+\date{19. October 2022}
 
 \renewcommand{\headeright}{Doctoral Research Plan}
 \renewcommand{\undertitle}{Doctoral Research Plan}
 
-%%% Add PDF metadata to help others organize their library
-%%% Once the PDF is generated, you can check the metadata with
-%%% $ pdfinfo template.pdf
 \hypersetup{
-pdftitle={Doctoral Research Plan},
-pdfauthor={Michael Weinold},
+    pdftitle={Doctoral Research Plan},
+    pdfauthor={Michael Weinold},
 }
 
 \begin{document}
@@ -78,13 +75,30 @@ pdfauthor={Michael Weinold},
 \maketitle
 
 \begin{abstract}
-	\cite{becattini_role_2021}
+    XXX as technologies are competing. Existing assessment of 
+	\cite{becattini_role_2021}. The proposed toolkit will provide the basis for the most accurate environmental impact assessment from life-cycle inventory to date. 
 \end{abstract}
 
-Attachments:
-WISER timeline, WISER sub-project 2 description
-
 \section{Introduction}
+
+    1. the need for environmentally conscious decision making in the areas of policy and industry
+    
+    2. environmental impact assessment as a tool not just to improve studies, but to improve decision making
+    
+        2.1. examples of where it is currently being used to make decisions or in a mandatory way (government)
+    
+    3. life-cycle assessment as the most accurate tool
+        3.1. why? because life-cycle emissions are important (negative example from nature climate change publication)
+    
+    4. current limitations of life-cycle assessment limit the accuracy of such predictions (show figure)
+    
+        4.1. not all processes modeled in process-based inventory
+        4.2. not enough accuracy in global trade tables
+        4.3. the obvious solution, hybrid life-cycle assessment, is difficult, because XZY. example: some papers straight-up exclude it.
+        
+    5. my project will solve all this because XYZ
+
+Even recent publications in \textit{Nature Climate Change} completely disregard the impact of life-cycle emissions under the assumption that these would be negligible: \textit{"We exclude life-cycle emissions of zero-carbon fuels assuming that in a world committed to climate neutrality and aligned with the Paris Agreement, these are negligible and already neutralized as part of industrial and energy mitigation efforts."}\cite{brazzola_definitions_2022}.
 
 Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. 
 
@@ -118,13 +132,30 @@ Despite the shortcomings of environmental assessments based on pure process-base
 
     For additional context on the timeline of the publications, including mandatory WISER deliverables and proposed work packages, compare the timeline at \url{https://phd.weinold.ch/timeline}.
     
+    \begin{enumerate}
+    \setcounter{enumi}{0}
+        \item GHG Assessment in Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{1}
+        \item Methodology of Modular Hybridization of Life-Cycle Inventory \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation \\ Target journals: Nature Climate Change (IF(2020) = 21.72), Energy and Environmental Science (IF(2020) = 38.53)
+    \end{enumerate}
+    
 \section{Research in the Context of the WISER Flagship}
     
-    The WISER InnoSuisse flagship project\footnote{\url{https://www.innosuisse.ch/inno/de/home/forderung-fur-schweizer-projekte/flagship-initiative/15-flagships.html}} aims to create \textit{"a digital ecosystem that simplifies the access to GHG knowledge"}. Stakeholders, both from industry and the public sector, will be provided an interactive dashboard of their emissions. They will further be provided a simplified way of interacting with life-cycle assessment software using different greenhouse gas assessment frameworks as well as different life-cycle inventory databases, thus eliminating the need for detailed domain knowledge not only of life-cycle assessment, but of the schema of different databases and of the technical infrastructure required to perform extensive calculations. As the core of sub-project 2 of WISER, the \texttt{Brightway} package will serve as the computational engine of the web services.
+    The WISER InnoSuisse flagship project\footnote{\url{https://www.innosuisse.ch/inno/de/home/forderung-fur-schweizer-projekte/flagship-initiative/15-flagships.html}} aims to create \textit{"a digital ecosystem that simplifies the access to GHG knowledge"}. Stakeholders, both from industry and the public sector, will be provided an interactive dashboard of their emissions. They will further be provided a simplified way of interacting with life-cycle assessment software using different greenhouse gas assessment frameworks as well as different life-cycle inventory databases, thus eliminating the need for detailed domain knowledge not only of life-cycle assessment, but of the schema of different databases and of the technical infrastructure required to perform extensive calculations. This is facilitated through the deployment of a web service accessible through an application programming interface (API). As the core of sub-project 2 of WISER, the \texttt{Brightway} package will serve as the computational engine of the web service.
     
     Work proposed as part of this doctoral research plan will greatly benefit WISER stakeholders. Hybrid life-cycle assessment will provide more accurate environmental impact assessment, thereby improving confidence in the results. Work defined in the mandatory WISER deliverables of sub-project 2 will in turn greatly benefit the doctoral research. The deployment of \texttt{Brightway} as a web service will provide platform-independent high-performance computing capabilities. Improvements in the technical setup of the documentation will facilitate better translation of scientific code into scientific publications. The implementation of the WISER API will allow for database-agnostic magic.
     
 \section{Research in Context of the Department}
+
+Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad_synthetic_2022} and unpublished work by \cite{sacchi_climate-neutral_2022}.
 
     The proposed development of a modular hybridization tool at part of the package \texttt{Brightway} builds on the strong tradition of life-cycle assessment in the Group for Technology Assessment of the Laboratory for Energy Analysis at the Paul Scherrer Institute \footnote{\url{https://www.psi.ch/en/ta/life-cycle-assessment}}. More specifically, life-cycle inventory hybridization is the logical next step connecting work by Aleksandra Kim on global sensitivity analysis of life-cycle assessment \cite{kim_aleksandra-kimgwp_uncertainties_2022}\cite{kim_aleksandra-kimgsa_framework_2021}\cite{paulillo_influential_2021} and work by Romain Sacchi on prospective life-cycle analysis based on integrated assessment models \cite{noauthor_premise_2022}\cite{sacchi_prospective_2022}. The former enables practitioners to understand the drivers of uncertainty, thereby guiding additional life-cycle inventory data collection efforts. The latter 
     However, as illustrated in the introduction, estimates of XXX> Data collection at the process level might be unfeasible due to a lack of data, the 
@@ -134,37 +165,10 @@ Despite the shortcomings of environmental assessments based on pure process-base
     
     Due to the multi-method approach combining software development and mathematical optimization with hybrid life-cycle assessment, a number of collaboration opportunities have been identified:
 	
-	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. With a holistic approach to XXX, including fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design, XXX. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
+	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. The RECCE (Resource to Climate Comparison Evaluator) \cite{noauthor_recce_2022} already provides XXXX. 
+ With a holistic approach to XXX, including fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design, XXX. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
     
     In addition, the Sustainability Commission\footnote{\url{https://mavt.ethz.ch/the-department/organization/bodies-and-committees.html}} of the Department of Mechanical Engineering at ETH Zurich has recently published a draft of their white paper on air transport. The commission suggest the founding of  \textit{"a scientific coalition of the international scientific societies and academic institutions for climate-neutral aviation"} \cite{mazzotti_air_2022}. The details of the proposal and any further action on the part of the the university, the department and research are currently pending further decisions by the commission. However, a supporting role of can be envisioned (LEA TA, ESA?).
-
-\section{Hybrid Life Cycle Assessment}
-
-	What is life-cycle assessment?
-	Why is its use in aviation a novelty?
-	
-	Some recent publications have completely disregarded the impact of life-cycle emissions under the assumption that these would be negligible \cite{brazzola_definitions_2022}.
-	
-	Why is the use of hybrid life-cycle inventory methods in aviation a novelty?
-	
-\section{USP}
-	
-    Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad_synthetic_2022} and unpublished work by \cite{sacchi_climate-neutral_2022}.
-
-\section{Ideas}
-
-    Connect this to "M2.1: Publication analysing impact of multiple standards and standards implementations in LCA"
-
-    Connect this to "RECCE 2035: Resource to Climate Comparison Evaluator"
-
-	Chris: research and development phase often missed completely in LCA
-	Chris: Airbus is using Brightway in future aircraft design
-	Chris: knowledge in the group on sustainable fuels (Tom Terlouw?)
-	
-
-\section{Questions}
-
-How do the results from Romain's preprint \cite{sacchi_climate-neutral_2022} compare against the new ICAO paper \cite{prussi_corsia_2021}
 
 \newpage
 \section{Systematic Literature Review}
@@ -726,9 +730,5 @@ AND SUBJAREA(
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
-
-\includepdf[pages=-]{attachments/phd_job_description.pdf}
-\includepdf[pages=-]{attachments/wiser_sp2_timeline.pdf}
-\includepdf[pages=-]{attachments/wiser_sp2_description.pdf}
 
 \end{document}
