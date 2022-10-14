@@ -188,11 +188,15 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
 
     \subsection{Hybrid Life-Cycle Assessment}
         
-        The limitations inherent to both analysis based on process inventories and analysis based on environmentally extended input-output tables in 1978 lead to the the first development of a hybrid analysis by Bullard et al. \cite{bullard_net_1978}. 
+        The review of the historical development and current state-of-the-art in conventional process-bases analysis and input-output analysis based on Leontief are beyond the scope of this report. The Springer book series \textit{Sustainable Production, Life Cycle Engineering and Management} provides the most comprehensive reference of these more fundamental areas of research \cite{teuteberg_progress_2019}\cite{albrecht_progress_2021}. 
         
-        The first significant mention of hybrid LCA in review by Lenzen in 2000 \cite{lenzen_errors_2000}
+        As detailed in the introduction, the limitations inherent to both analysis based on process inventories and analysis based on environmentally extended input-output tables motivated the initial of a hybrid methodology for energy usage analysis by Bullard et al. in 1978 \cite{bullard_net_1978}. The term "hybrid life-cycle assessment" first saw use from 2000, for instance in a review by Lenzen et al.\cite{lenzen_errors_2000}. Since then, a number of case studies using hybrid methodology has been published, as illustrated in table \ref{tab_studies}. None 
         
-        In the only comprehensive review identified, Crawford et al. \cite{crawford_hybrid_2018} detail the concerning lack of even a unified nomenclature to designate different mathematical approaches to hybridization. In an attempt to provide such a standard, they collected 
+        Only two decades later would the methods be formalized by XXX some more text here.
+        
+        The path-exchange method, proposed in 1997 by Treloar \cite{treloar_extracting_1997} and formalized in 2009 by Lenzen et al. \cite{lenzen_path_2009}. The matrix augmentation method, introduced in 1999 by Joshi \cite{joshi_product_1999}. The integrated method, introduced in 2000 by Suh and Hupped \cite{suh_gearing_2000}. The tiered method proposed in 1978 by Bullard et al. \cite{bullard_net_1978} and formalized by \cite{heij} Heijungs et al. in 2002 \cite{heijungs_computational_2002}, which was further improved to avoid double counting by Agez et al. between 2019 and 2022 \cite{agez_lifting_2019}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}.
+
+        Three reviews specific to hybrid methods were identified. The most comprehensive tratment is given by Crawford in 2018 \cite{crawford_hybrid_2018} building on earlier work by Islam et al. \cite{islam_review_2016} and Nakamura at al. \cite{nakamura_inputoutput_2016}. Crawford et al. detail the concerning lack of even a unified nomenclature to designate different mathematical approaches to hybridization. In an attempt to provide such a standard, they collected 
         
         \begin{figure}[h!]
         	\centering
@@ -202,6 +206,7 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
         \end{figure}
         
         Since then, a number of studies has attempted to use hybrid methods, 
+        are three main aspects slowing down the uptake of hybrid LCI methods in LCA \cite{crawford_hybrid_2018}.
         
         \begin{table}[H]
             \centering
@@ -247,6 +252,10 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
             \caption{Selection of environmental impact studies using a hybrid life-cycle assessment methodology. The search query used to list all relevant studies is listed in section \ref{sub_boolean} in the Appendix. Studies excluded are those older than 5 years with less than 5 citations and those describing sectors deemed too specific (e.g. \textit{"Comparative life cycle assessment of drinking straws in Brazil" \cite{zanghelini_comparative_2020}}. Abbreviations: IO = Input Output Table/Database, PLCI = Process-Based Life-Cycle Inventory Database, MC = Monte-Carlo Technique}
             \label{tab_studies}
         \end{table}
+        
+        The most significant contribution to the practical application of hybridization methodology identified since the respective formalizations is work by Agez et al. on introducing a heuristics-based semi-automated approach to avoiding double counting in tiered hybrid approaches \cite{agez_lifting_2019}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}. The associated scientific software package, however, is poorly documented and includes no tests. It can thus not be guaranteed that it works as expected.
+        
+        Further work is needed.
 
     \subsection{Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation}
     
