@@ -75,7 +75,7 @@
 \maketitle
 
 \begin{abstract}
-    In light of international efforts to reduce carbon emissions and other environmental burdens, life-cycle assessment has emerged as a powerful tool for decision makers. Following international standardization efforts, the method is now widely used in academia and industry. However, depending on the sector or product under investigation, results of different life-cycle assessments still underestimate environmental burdens by up to 100\%. This is due to the natural limitation in the level of detail provided by process-based inventory data. This can greatly diminish confidence in results and negatively impact decisions taken on the basis of life-cycle assessments. This shortcoming can be overcome by hybridizing with environmentally extended input-output data, which covers the global economy in its entirety. However, adoption of this important improvement is hampered by a lack of understanding of the mathematical nuances of the method, a lack of documentation in existing studies and the lack of any automated software capable of hybridization.
+    In light of international efforts to reduce carbon emissions and other environmental burdens, life-cycle assessment has emerged as a powerful tool for decision makers. Following international standardization efforts, the method is now widely used in academia and industry. However, depending on the sector or product under investigation, results of different life-cycle assessments still underestimate environmental burdens by up to 100\%. This is due to the natural limitation in the level of detail provided by process-based inventory data. This can greatly diminish confidence in results and negatively impact decisions taken on the basis of life-cycle assessments. While the issue has been at the forefront of discussions about the limitations of life-cycle assessments, it has remained unsolved at the practical level. This shortcoming can be overcome by hybridizing with environmentally extended input-output data, which covers the global economy in its entirety. However, adoption of this important improvement is hampered by a lack of understanding of the mathematical nuances of the method, a lack of documentation in existing studies and the lack of any automated software capable of hybridization.
     
     The proposed research project will develop a modular solution for hybridizing life-cycle inventory and provide the basis for the most accurate environmental impact assessment from life-cycle inventory to date. This will greatly improve confidence in results from life-cycle assessment and improve the reproducibility of any studies. To optimize the access of life-cycle practitioners and researchers to the toolkit, it will be written in \texttt{Python} and integrated into the \texttt{Brightway} package. Further integration into the WISER InnoSuisse Flagship web service will enable industry stakeholders to take advantage of the aforementioned improvements immediately after their release. The proposed research project further builds on strong research foundations at the Technology Assessment Group of Paul Scherrer Institute.
     
@@ -85,7 +85,11 @@
 
 \section{Introduction}
 
-    1. the need for environmentally conscious decision making in the areas of policy and industry
+    Life-cycle assessment (LCA) is defined as \textit{"a tool to assess the potential environmental impacts and resources used throughout a product’s life cycle, i.e. from raw material acquisition, via production and use stages, to waste management"} by ISO 14044\cite{noauthor_iso_2006}. Originally developed in the 1960s \cite{hauschild_life_2018}, it has 
+    
+    Today, life-cycle assessment provides decision support for industry leaders and policy makers alike \cite{tillman_significance_2000}\cite{dong_environmental_2018}. In addition, governments have made product classifications mandatory (EXAMPLES HERE). 
+
+    1. the need for environmentally consciou (EXAMPLEs decision making in the areas of policy and industry
     
     2. environmental impact assessment as a tool not just to improve studies, but to improve decision making
     
@@ -105,7 +109,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/underestimation_excel.png}
-	\caption{Compilation of data from studies comparing purely process-based life-cycle assessment and hybrid life-cycle assessment showing the relative underestimation of the first case. Source: Compiled from data provided in comparative studies \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}}
+	\caption{Truncation of different process-based life-cycle assessment studies. Note that some studies underestimate emissions by as much as 100\%. Source: Compiled from data provided in reviews \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}}
 	\label{fig:performance}
 \end{figure}
 
@@ -127,7 +131,7 @@ Even recent publications in \textit{Nature Climate Change} completely disregard 
 
 Despite the shortcomings of environmental assessments based on pure process-bases life-cycle inventory analysis methods, they are still widely used today. One reason XXX> The methodology required to avoid double counting has not been well formulated. 
 
-    life cycle assessment is \textit{"a tool to assess the potential environmental impacts and resources used throughout a product’s life cycle, i.e. from raw material acquisition, via production and use stages, to waste management"}\cite{noauthor_iso_2006}. Developed in the 1960s \cite{hauschild_life_2018}. 
+    
     
 \section{Research Questions}
     
