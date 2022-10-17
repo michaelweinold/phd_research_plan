@@ -85,11 +85,18 @@
 
 \section{Introduction}
 
-    Life-cycle assessment (LCA) is defined as \textit{"a tool to assess the potential environmental impacts and resources used throughout a product’s life cycle, i.e. from raw material acquisition, via production and use stages, to waste management"} by ISO 14044\cite{noauthor_iso_2006}. Originally developed in the 1960s \cite{hauschild_life_2018}, it has 
+    The need to fight climate change \cite{rama_climate_2022}
+
+    Life-cycle assessment has emerged in the 1960s as a method for assessing the environmental impacts associated with the complete life cycle of products, processes or services \cite{hauschild_life_2018}. Following international standardization efforts, the methodology today is defined by ISO14044 \cite{noauthor_iso_2006}, developed by the International Organization for Standardization and the International Reference Life Cycle Data System (ILCD), developed by the European Commission \cite{european_commission_joint_research_centre_institute_for_environment_and_sustainability_ildc_2010}, among others. 
     
-    Today, life-cycle assessment provides decision support for industry leaders and policy makers alike \cite{tillman_significance_2000}\cite{dong_environmental_2018}. In addition, governments have made product classifications mandatory (EXAMPLES HERE). 
+    Besides the obvious application in the direct comparison of different technologies, life-cycle assessment today provides the primary XXX for evidence-based environmental decision making for industry leaders and policy makers alike \cite{seidel_application_2016}. In fact, XXX the validity XXX, is so great, that : \cite{tillman_significance_2000}\cite{dong_environmental_2018}. In addition, governments have made product classifications mandatory (EXAMPLES HERE). 
     
-    Even recent publications in \textit{Nature Climate Change} completely disregard the impact of life-cycle emissions under the assumption that these would be negligible: \textit{"We exclude life-cycle emissions of zero-carbon fuels assuming that in a world committed to climate neutrality and aligned with the Paris Agreement, these are negligible and already neutralized as part of industrial and energy mitigation efforts."}\cite{brazzola_definitions_2022}.
+    The widespread adoption of life-cycle assessment in academic publications and industry reporting non-withstanding, several limitations have opened the method to criticism from practitioners and policy makers \cite{finnveden_limitations_2000}\cite{plevin_using_2014}. XXX differences, not yet well defined enough despite standardization, does not capture service-intensive industries XXX
+    
+    
+    It is thus imperative, that \cite{jasanoff_contested_1987}
+    
+    
 
     1. the need for environmentally consciou (EXAMPLEs decision making in the areas of policy and industry
     
@@ -107,12 +114,15 @@
     
     4. the lack of green house gas assessment standards
     
+    Sustainable aviation in particular would benefit from proper treatment by life-cycle assessment, because:
+    Even recent publications in \textit{Nature Climate Change} completely disregard the impact of life-cycle emissions under the assumption that these would be negligible: \textit{"We exclude life-cycle emissions of zero-carbon fuels assuming that in a world committed to climate neutrality and aligned with the Paris Agreement, these are negligible and already neutralized as part of industrial and energy mitigation efforts."}\cite{brazzola_definitions_2022}.
+    
     compare \cite{bourgault_documentation_2021}
         
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/underestimation_excel.png}
-	\caption{Truncation of different process-based life-cycle assessment studies. Note that some studies underestimate emissions by as much as 100\%. Source: Compiled from data provided in reviews \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}}
+	\caption{Compilation of the ranges in truncation errors for different process-based life-cycle assessment case-studies. Each meta-study on the abscissa gives a range for the truncation error of various purely process-based life-cycle assessment case-studies on the ordinate. The magnitude of the truncation is dependent on the parameters of the assessment, on the level of detail in the input data and the specific process or industry under investigation. Note that some studies underestimate emissions by as much as 100\%. Source: Compiled from data provided in reviews \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}}
 	\label{fig:performance}
 \end{figure}
 
@@ -134,7 +144,7 @@
     
     >>>> different results remains one major point of contention and criticism of life-cycle assessment \cite{reap_survey_2008}\cite{reap_survey_2008-1}
     
-    >>>> would resolve long-standing limitations mentioned many times in literature: \cite{finnveden_limitations_2000}\cite{plevin_using_2014}
+    >>>> would resolve long-standing limitations mentioned many times in literature: 
 
 
 
@@ -146,7 +156,7 @@
     
     how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
 
-    Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive enironmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
+    Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive environmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
     
     However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the calculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
     
@@ -159,11 +169,11 @@
 
     To obtain the highest-accuracy prospective life-cycle assessment of sustainable aviation to date, a scientific software package for modular hybridization of life-cycle inventories is to be developed. It will enable the extension of process-based inventories, using either a tiered hybrid, path-exchange, matrix augmentation or integrated hybrid \cite{hauschild_life_2015}\cite{hauschild_life_2018}\cite{crawford_hybrid_2018} approach. To avoid double-counting of emissions, a heuristic approach based on Agez et al. \cite{agez_lifting_2019}\cite{agez_correcting_2022}\cite{agez_hybridization_2020} will be used initially. The most promising candidates for hybridization are the Ecoinvent (version 3.9) process-based inventory database and the Exiobase (version 3) input-output multi-regional environmentally extended supply-use  table and input-output table.
     
-    To obtain high computational efficiency on cluster hardware but concurrently enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be implemented using appropriate packages, such as \texttt{sparse} \cite{abbasi_sparse_2018}. If applicable, legacy matrix multiplication algorithms will be optimized using novel approaches based on reinforcement learning introduced by Fawzi at al. in 2022 \cite{fawzi_discovering_2022}.
+    In line with existing scientific software for life-cycle assessment, the package will be written in \texttt{Python}. To obtain high computational efficiency on cluster hardware but concurrently enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be implemented using appropriate packages, such as \texttt{sparse} \cite{abbasi_sparse_2018}. If applicable, legacy matrix multiplication algorithms will be optimized using novel approaches based on reinforcement learning introduced by Fawzi at al. in 2022 \cite{fawzi_discovering_2022}.
     
     The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
     
-    Using this toolkit, the case studies will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
+    Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
 
 
 \section{Planned Journal Publications}
@@ -172,12 +182,12 @@
     
     \begin{enumerate}
     \setcounter{enumi}{0}
-        \item GHG Assessment in Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+        \item Carbon (Greenhouse Gas) Accounting with Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
     \end{enumerate}
     
     \begin{enumerate}
     \setcounter{enumi}{1}
-        \item Methodology of Modular Hybridization of Life-Cycle Inventory \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+        \item Methodology of Modular Hybridization of Life-Cycle Inventory Data \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
     \end{enumerate}
     
     \begin{enumerate}
@@ -228,7 +238,7 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
         \begin{figure}[h!]
         	\centering
         	\includegraphics[width=\textwidth]{figures/nomenclature.png}
-        	\caption{The diversity in nomenclature used by authors of different life-cycle assessment case studies to self-define the methods used to hybridize life-cycle inventory. The definition proposed by Crawford et al. is used to categorize different studies. Figure based on data collected by Crawford et al.\cite{crawford_hybrid_2018}. In scope were peer-reviewed publications between 2010 and 2015. Table \ref{tab_studies} includes studies beyond 2015.}
+        	\caption{Histogram showing the diversity in nomenclature used by authors of different life-cycle assessment case studies to self-define the methods used to hybridize life-cycle inventory. Shown are peer-reviewed publications between 2010 and 2015. The definition proposed by Crawford et al. is used to categorize different studies (Tiered, Matrix, Integrated, Path Exchange). Source: based on data collected by Crawford et al. \cite{crawford_hybrid_2018}. Note that table \ref{tab_studies} includes more recent studies studies beyond 2015.}
         	\label{fig:performance}
         \end{figure}
         
