@@ -85,105 +85,32 @@
 \end{abstract}
 
 \section{Introduction}
+\label{sec:introduction}
     
     As human economical activity has increased exponentially over the past century, anthropogenic pressure on the natural ecosystem has grown simultaneously \cite{steffen_anthropocene_2007}. This is illustrated by a progressive deterioration of the of Planetary Boundary indicators, defined as a set of environmental control variables under which human societies has historically flourished \cite{rockstrom_planetary_2009}\cite{steffen_planetary_2015}. In order to combat this decline effectively and avoid non-linear, abrupt environmental change, the Intergovernmental Panel on Climate Change has reiterated the importance of 
     \textit{"enhancing knowledge on risks, impacts, and their consequences"} \cite{rama_climate_2022} as part of evidence-based responses to current pressure on the natural ecosystem. In this context, life-cycle assessment has emerged as the primary method for assessing the environmental impacts associated with the complete life cycle of products, processes or services \cite{hauschild_life_2018}. Developed in the 1960s and following international standardization efforts, the methodology today is defined by ISO14044 \cite{noauthor_iso_2006}, developed by the International Organization for Standardization and the International Reference Life Cycle Data System, developed by the European Commission \cite{european_commission_joint_research_centre_institute_for_environment_and_sustainability_ildc_2010}, among others. A versatile method, it can be used to calculate the carbon footprint of products and processes \cite{finkbeiner_carbon_2016} or assess the environmental impact of entire organizations \cite{finkbeiner_life_2016}. Besides the obvious application in the direct comparison of different technologies, life-cycle assessment today provides a vital evidence-based environmental decision making tool for industry leaders and policy makers alike \cite{tillman_significance_2000}\cite{seidel_application_2016}\cite{dong_environmental_2018}. What is more, life-cycle assessment will be at the core of mandatory European Sustainability Reporting Standards, currently under development \cite{noauthor_public_2022}. It is thus that not only life-cycle practitioners and scientists have a vested interest in the method being as accurate as possible, but also industry leaders and political decision makers. 
     
-    The widespread adoption of life-cycle assessment in academic publications and industry reporting non-withstanding, several limitations have opened the method to criticism \cite{reap_survey_2008}\cite{reap_survey_2008-1}\cite{finnveden_limitations_2000}\cite{plevin_using_2014}. The most significant drawback currently inherent to classical life-cycle assessment is referred to as \textit{truncation error} \cite{crawford_hybrid_2018}. For instance, in order to obtain the environmental impact of a product, a life-cycle inventory database is used to obtain information on all processes related to its manufacturing. Since the task of gathering information on all processes of the modern economy is daunting even at the most basic level of detail, such process-based databases are naturally limited in their scope. Hence, purely process-based life-cycle assessment is prone to underestimating (truncating) the full environmental impact. In fact, several meta-studies estimated the truncation error in specific case studies that used purely process-based life-cycle inventory and found an underestimation of up to 100\%, as shown in figure \ref{fig:underestimation}. This is closely related to the issue of choosing system boundaries in life-cycle assessment \cite{teh_hybrid_2017}. XXX some information on EEIO ana
+    The widespread adoption of life-cycle assessment in academic publications and industry reporting non-withstanding, several limitations have opened the method to criticism \cite{reap_survey_2008}\cite{reap_survey_2008-1}\cite{finnveden_limitations_2000}\cite{plevin_using_2014}. The most significant drawback currently inherent to classical life-cycle assessment is referred to as \textit{truncation error} \cite{crawford_hybrid_2018}. For instance, in order to obtain the environmental impact of a product, a life-cycle inventory database is used to obtain information on all processes related to its manufacturing. Since the task of gathering information on all processes of the modern economy is daunting even at the most basic level of detail, such process-based databases are naturally limited in their scope. Hence, purely process-based life-cycle assessment is prone to underestimating (truncating) the full environmental impact. In fact, several meta-studies estimated the truncation error in specific case studies that used purely process-based life-cycle inventory and found an underestimation of up to 100\%, as shown in figure \ref{fig:underestimation}. This is closely related to the issue of choosing system boundaries in life-cycle assessment \cite{teh_hybrid_2017}. On the other hand, environmentally extended input-output analysis has attempted to circumvent this issue by using instead an inventory based on trade tables describing the monetary flows between different sectors of the economy. While this data is by definition complete, it does not provide the same level of process specific details and excludes important parts of the life cycle of products, such as end-of-life management.
     
-    XXX one paragraph on hybrid lca XXX
-    
-     the most significant problem stems from the issue of double-counting emissions \cite{agez_hybridization_2020}. If, for instance, all processes related to steel production and use are covered in the process inventory, any additional inputs from an environmentally extended input-output database must not contain steel in order to avoid "double counting" emissions. 
-     A prototype \texttt{pylcaio}\cite{noauthor_pylcaio_2022} exists .
-    
-    1. zero carbon goal
-    2. existing track record of efficiency improvements
-    3. current lack of good data on different competing technologies
-    
-    
-    Sustainable aviation in particular would benefit from proper treatment by life-cycle assessment, because:
-    Even recent publications in \textit{Nature Climate Change} completely disregard the impact of life-cycle emissions under the assumption that these would be negligible: \textit{"We exclude life-cycle emissions of zero-carbon fuels assuming that in a world committed to climate neutrality and aligned with the Paris Agreement, these are negligible and already neutralized as part of industrial and energy mitigation efforts."}\cite{brazzola_definitions_2022}.
-    
-    how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
-
-    Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive environmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
-    
-    However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the calculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
-    
-    Bombardier published an environmental product declaration (LCA) in 2022: \cite{noauthor_challenger_2022}
-    
-    compare \cite{bourgault_documentation_2021}
-        
     \begin{figure}[h!]
     	\centering
     	\includegraphics[width=\textwidth]{figures/underestimation_excel.png}
-    	\caption{Compilation of the ranges in truncation errors for different process-based life-cycle assessment case-studies. Each meta-study on the abscissa gives a range for the truncation error of various purely process-based life-cycle assessment case-studies on the ordinate. The magnitude of the truncation is dependent on the parameters of the assessment, on the level of detail in the input data and the specific process or industry under investigation. Note that some studies underestimate emissions by as much as 100\%. Source: Compiled from data provided in reviews \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}}
+    	\caption{Compilation of the ranges in truncation errors for different process-based life-cycle assessment case-studies. Each meta-study on the abscissa gives a range for the truncation error of various purely process-based life-cycle assessment case-studies on the ordinate. The magnitude of the truncation is dependent on the parameters of the assessment, on the level of detail in the input data and the specific process or industry under investigation. Note that some studies underestimate emissions by as much as 100\%. Source: Compiled from data provided in reviews \cite{rebitzer_input-output_2002}\cite{lenzen_errors_2000}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}\cite{agez_lifting_2019}.}
     	\label{fig:underestimation}
     \end{figure}
     
-    The resulting publications and scientific software will constitute a significant contribution to one of the most significant limitations in a key method in evidence-based environmental decision making. Improvements in the accuracy of the environmental impact calculations will increase confidence in the method itself while the technical implementation will enable, for the first time, practitioners and researchers to access the full potential of hybrid life-cycle assessment. To demonstrate this, the air transport sector will be studied, providing a much more accurate prediction of sustainable aviation technologies than currently available. 
+    Ideally, the methods could be combined to take advantage of the depth of process-based inventories and the breadth of input-output inventories. Such a hybrid life-cycle assessment requires a number of purely technical innovations related to the unification of nomenclature between databases, the handling of matrices and high levels of manual intervention. However, the most significant problem stems from the issue of double-counting emissions \cite{agez_hybridization_2020}. If, for instance, all processes related to steel production and use are covered in the process inventory, any additional inputs from an environmentally extended input-output database must not contain steel in order to avoid "double counting" of emissions.
     
-\section{Methods}
-
-    To obtain the highest-accuracy prospective life-cycle assessment of sustainable aviation to date, a scientific software package for modular hybridization of life-cycle inventories is to be developed. It will enable the extension of process-based inventories, using either a tiered hybrid, path-exchange, matrix augmentation or integrated hybrid \cite{hauschild_life_2015}\cite{hauschild_life_2018}\cite{crawford_hybrid_2018} approach. To avoid double-counting of emissions, a heuristic approach based on Agez et al. \cite{agez_lifting_2019}\cite{agez_correcting_2022}\cite{agez_hybridization_2020} will be used initially. The most promising candidates for hybridization are the Ecoinvent (version 3.9) process-based inventory database and the Exiobase (version 3) input-output multi-regional environmentally extended supply-use  table and input-output table.
-    
-    In line with existing scientific software for life-cycle assessment, the package will be written in \texttt{Python}. To obtain high computational efficiency on cluster hardware but concurrently enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be implemented using appropriate packages, such as \texttt{sparse} \cite{abbasi_sparse_2018}. If applicable, legacy matrix multiplication algorithms will be optimized using novel approaches based on reinforcement learning introduced by Fawzi at al. in 2022 \cite{fawzi_discovering_2022}.
-    
-    The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
-    
-    Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
-
-
-\section{Planned Journal Publications}
-
-    For additional context on the timeline of the publications, including mandatory WISER deliverables and proposed work packages, compare the timeline at \url{https://phd.weinold.ch/timeline}.
-    
-    \begin{enumerate}
-    \setcounter{enumi}{0}
-        \item Carbon (Greenhouse Gas) Accounting with Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
-    \end{enumerate}
-    
-    \begin{enumerate}
-    \setcounter{enumi}{1}
-        \item Methodology of Modular Hybridization of Life-Cycle Inventory Data \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
-    \end{enumerate}
-    
-    \begin{enumerate}
-    \setcounter{enumi}{2}
-        \item Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation \\ Target journals: Nature Climate Change (IF(2020) = 21.72), Energy and Environmental Science (IF(2020) = 38.53)
-    \end{enumerate}
-    
-\section{Research in the Context of the WISER Flagship}
-    
-    The WISER InnoSuisse flagship project\footnote{\url{https://www.innosuisse.ch/inno/de/home/forderung-fur-schweizer-projekte/flagship-initiative/15-flagships.html}} aims to create \textit{"a digital ecosystem that simplifies the access to GHG knowledge"}. Stakeholders, both from industry and the public sector, will be provided an interactive dashboard of their emissions. They will further be provided a simplified way of interacting with life-cycle assessment software using different greenhouse gas assessment frameworks as well as different life-cycle inventory databases, thus eliminating the need for detailed domain knowledge not only of life-cycle assessment, but of the schema of different databases and of the technical infrastructure required to perform extensive calculations. This is facilitated through the deployment of a web service accessible through an application programming interface (API). As the core of sub-project 2 of WISER, the \texttt{Brightway} package will serve as the computational engine of the web service.
-    
-    Work proposed as part of this doctoral research plan will greatly benefit WISER stakeholders. Hybrid life-cycle assessment will provide more accurate environmental impact assessment, thereby improving confidence in the results. Work defined in the mandatory WISER deliverables of sub-project 2 will in turn greatly benefit the doctoral research. The deployment of \texttt{Brightway} as a web service will provide platform-independent high-performance computing capabilities. Improvements in the technical setup of the documentation will facilitate better translation of scientific code into scientific publications. The implementation of the WISER API will allow for database-agnostic magic.
-    
-\section{Research in Context of the Department}
-
-Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad_synthetic_2022} and unpublished work by \cite{sacchi_climate-neutral_2022}.
-
-    The proposed development of a modular hybridization tool at part of the package \texttt{Brightway} builds on the strong tradition of life-cycle assessment in the Group for Technology Assessment of the Laboratory for Energy Analysis at the Paul Scherrer Institute \footnote{\url{https://www.psi.ch/en/ta/life-cycle-assessment}}. More specifically, life-cycle inventory hybridization is the logical next step connecting work by Aleksandra Kim on global sensitivity analysis of life-cycle assessment \cite{kim_aleksandra-kimgwp_uncertainties_2022}\cite{kim_aleksandra-kimgsa_framework_2021}\cite{paulillo_influential_2021} and work by Romain Sacchi on prospective life-cycle analysis based on integrated assessment models \cite{noauthor_premise_2022}\cite{sacchi_prospective_2022}. The former enables practitioners to understand the drivers of uncertainty, thereby guiding additional life-cycle inventory data collection efforts. The latter 
-    However, as illustrated in the introduction, estimates of XXX> Data collection at the process level might be unfeasible due to a lack of data, the 
-    Hybridization closes this gap, thereby offering the most accurate assessment to date.
-    
-    The choice of aviation as the main case study of the proposed tools reflects the importance of the topic laid out in the introduction. It builds on and supplements existing work in the Technology Assessment group by Zipeng Liu and Tom Terlouw \cite{terlouw_large-scale_2022}. It further enables the development of the MAVT lectures \textit{Basics of Air Transport (Aviation I)} and \textit{Management of Air Transport (Aviation II)} \footnote{compare the study plan agreed upon with Prof. McKenna in the appendix} offer an opportunity to XXX.
-    
-    Due to the multi-method approach combining software development and mathematical optimization with hybrid life-cycle assessment, a number of collaboration opportunities have been identified:
-	
-	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. The RECCE (Resource to Climate Comparison Evaluator) \cite{noauthor_recce_2022} already provides XXXX. 
- With a holistic approach to XXX, including fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design, XXX. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
-    
-    In addition, the Sustainability Commission\footnote{\url{https://mavt.ethz.ch/the-department/organization/bodies-and-committees.html}} of the Department of Mechanical Engineering at ETH Zurich has recently published a draft of their white paper on air transport. The commission suggest the founding of  \textit{"a scientific coalition of the international scientific societies and academic institutions for climate-neutral aviation"} \cite{mazzotti_air_2022}. The details of the proposal and any further action on the part of the the university, the department and research are currently pending further decisions by the commission. However, a supporting role of can be envisioned (LEA TA, ESA?).
-
-\newpage
 \section{Current State of Research}
+\label{sec:current_state_of_research}
 
-    \subsection{Implementation of Greenhouse Gas Assessment Frameworks in Life-Cycle Assessment Software}
+    %\subsection{Implementation of Greenhouse Gas Assessment Frameworks in Life-Cycle Assessment Software}
+    %    
+    %    TEXT TO BE ADDED HERE
     
     \subsection{Life-Cycle Assessment}
     
-        The current state-of-the-art in conventional process-based life-cycle assessment and inventory analysis is best documented in the book series \textit{Sustainable Production, Life Cycle Engineering and Management} \cite{teuteberg_progress_2019}\cite{albrecht_progress_2021}. A similar treatment of Leontief input-output analysis is provided in a recent comprehensive book \cite{miller_input-output_2022}. The review of either is out of scope for this report.
+        The current state-of-the-art in conventional process-based life-cycle assessment and inventory analysis is best documented in the book series \textit{Sustainable Production, Life Cycle Engineering and Management} \cite{teuteberg_progress_2019}\cite{albrecht_progress_2021}. A similar treatment of Leontief's input-output analysis is provided in a recent comprehensive book \cite{miller_input-output_2022}. The review of either is out of scope for this report.
 
     \subsection{Hybrid Life-Cycle Assessment}
         
@@ -251,7 +178,7 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
                     Chang et al., 2014 \cite{chang_shale--well_2014} & Resource Extraction & generic? & CO2eq, SO2, NOx, CH4 \\
                 \hline
             \end{tabularx}
-            \caption{Selection of environmental impact studies using a hybrid life-cycle assessment methodology. The search query used to list all relevant studies is listed in section \ref{sub_boolean} in the Appendix. Studies excluded are those older than 5 years with less than 5 citations and those describing sectors deemed too specific (e.g. \textit{"Comparative life cycle assessment of drinking straws in Brazil" \cite{zanghelini_comparative_2020}}. Abbreviations: IO = Input Output Table/Database, PLCI = Process-Based Life-Cycle Inventory Database, MC = Monte-Carlo Technique}
+            \caption{Selection of environmental impact studies using a hybrid life-cycle assessment methodology. Studies excluded are those older than 5 years with less than 5 citations and those describing sectors deemed too specific (e.g. \textit{"Comparative life cycle assessment of drinking straws in Brazil" \cite{zanghelini_comparative_2020}}. Abbreviations: IO = Input Output Table/Database, PLCI = Process-Based Life-Cycle Inventory Database, MC = Monte-Carlo Technique}
             \label{tab_studies}
         \end{table}
         
@@ -259,13 +186,85 @@ Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad
         
         So while practitioners agree that further work is needed, this provides an excellent starting point.
 
-    \subsection{Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation}
+    %\subsection{Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation}
     
-        No publication was identified using hybrid life-cycle assessment for the prospective assessment of sustainable aviation.
+    %    No publication was identified using hybrid life-cycle assessment for the prospective assessment of sustainable aviation.
         
-        include the work by sacchi et al.
-        include the work by patt et al.
+    %    include the work by sacchi et al.
+    %    include the work by patt et al.
         
+    
+\section{Research Questions and Proposed Research Project}
+    
+    The importance of improving the accuracy of life-cycle assessment by adapting existing methodology to use hybrid inventories has been introduced in section \ref{sec:introduction}. The associated scientific groundwork has been laid out in section \ref{sec:current_state_of_research}. However, as is evident from the associated literature review, there is currently no consensus among the scientific community on the applicability of the different methods proposed. This is because of a lack of understanding of the downstream effects of different hybridization methods and the associated choices made on inventory matrices. There is further a lack of tools to perform automated hybrid life-cycle assessment, which in turn makes any meta-analysis of methods exceedingly difficult. A lack of universal nomenclature provides a further obstacles to progress in the field. 
+    
+    It is in this context that the present research project aims to advance the field by first building a toolkit for modular life-cycle inventory hybridization. Using this toolkit, for the first time, different methods for hybridization will be implemented comparatively and quality metrics, such as the truncation error, systematically quantified. This will allow for a seminal meta-study of the different hybridization methods and will enable the most accurate life-cycle assessment to-date.
+    
+    To demonstrate this, the air transport sector will be studied, providing a much more accurate prediction of sustainable aviation technologies than currently available. Sustainable aviation in particular would benefit from proper treatment by hybrid life-cycle assessment. Even recent publications in \textit{Nature Climate Change} completely \textit{"(...) exclude life-cycle emissions of zero-carbon fuels assuming that in a world committed to climate neutrality and aligned with the Paris Agreement, these are negligible and already neutralized as part of industrial and energy mitigation efforts."} \cite{brazzola_definitions_2022}, thereby disregarding the significant impact of life-cycle emissions associated with current and proposed fuels and technologies \cite{prussi_corsia_2021}.
+    
+    In conclusion, the research project proposed in the present document and its resulting publications and scientific software will constitute a significant contribution to one of the most significant limitations in a key method in evidence-based environmental decision making. Improvements in the accuracy of the environmental impact calculations will increase confidence in the method itself while the technical implementation will enable, for the first time, practitioners and researchers to access the full potential of hybrid life-cycle assessment.
+
+    %Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive environmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
+    
+    %However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the calculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
+    
+    %Bombardier published an environmental product declaration (LCA) in 2022: \cite{noauthor_challenger_2022}
+    
+\section{Methods}
+
+    To obtain the highest-accuracy prospective life-cycle assessment of sustainable aviation to date, a scientific software package for modular hybridization of life-cycle inventories is to be developed. It will enable the extension of process-based inventories, using either a tiered hybrid, path-exchange, matrix augmentation or integrated hybrid \cite{hauschild_life_2015}\cite{hauschild_life_2018}\cite{crawford_hybrid_2018} approach. To avoid double-counting of emissions, a heuristic approach based on Agez et al. \cite{agez_lifting_2019}\cite{agez_correcting_2022}\cite{agez_hybridization_2020} will be used initially. The most promising candidates for hybridization are the Ecoinvent (version 3.9) process-based inventory database and the Exiobase (version 3) input-output multi-regional environmentally extended supply-use  table and input-output table. The prototype package \texttt{pylcaio} by Agez et al. \cite{noauthor_pylcaio_2022} will provide a starting point.
+    
+    In line with existing scientific software for life-cycle assessment, the package will be written in \texttt{Python}. To obtain high computational efficiency on cluster hardware but concurrently enable practitioners to run calculations on consumer hardware, matrix manipulations (matrix multiplication, row-wise and column-wise manipulations, persistence of matrices to disk) will be implemented using appropriate packages, such as \texttt{sparse} \cite{abbasi_sparse_2018}. If applicable, legacy matrix multiplication algorithms will be optimized using novel approaches based on reinforcement learning introduced by Fawzi at al. in 2022 \cite{fawzi_discovering_2022}.
+    
+    The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
+    
+    Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
+
+
+\section{Planned Journal Publications}
+
+    For additional context on the timeline of the publications, including mandatory WISER deliverables and proposed work packages, compare the timeline at \url{https://phd.weinold.ch/timeline}.
+    
+    \begin{enumerate}
+    \setcounter{enumi}{0}
+        \item Carbon (Greenhouse Gas) Accounting with Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    % compare \cite{bourgault_documentation_2021}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{1}
+        \item Methodology of Modular Hybridization of Life-Cycle Inventory Data \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation \\ Target journals: Nature Climate Change (IF(2020) = 21.72), Energy and Environmental Science (IF(2020) = 38.53)
+    \end{enumerate}
+    
+\section{Research in the Context of the WISER Flagship}
+    
+    The WISER InnoSuisse flagship project\footnote{\url{https://www.innosuisse.ch/inno/de/home/forderung-fur-schweizer-projekte/flagship-initiative/15-flagships.html}} aims to create \textit{"a digital ecosystem that simplifies the access to GHG knowledge"}. Stakeholders, both from industry and the public sector, will be provided an interactive dashboard of their emissions. They will further be provided a simplified way of interacting with life-cycle assessment software using different greenhouse gas assessment frameworks as well as different life-cycle inventory databases, thus eliminating the need for detailed domain knowledge not only of life-cycle assessment, but of the schema of different databases and of the technical infrastructure required to perform extensive calculations. This is facilitated through the deployment of a web service accessible through an application programming interface (API). As the core of sub-project 2 of WISER, the \texttt{Brightway} package will serve as the computational engine of the web service.
+    
+    Work proposed as part of this doctoral research plan will greatly benefit WISER stakeholders. Hybrid life-cycle assessment will provide more accurate environmental impact assessment, thereby improving confidence in the results. Work defined in the mandatory WISER deliverables of sub-project 2 will in turn greatly benefit the doctoral research. The deployment of \texttt{Brightway} as a web service will provide platform-independent high-performance computing capabilities. Improvements in the technical setup of the documentation will facilitate better translation of scientific code into scientific publications. The implementation of the WISER API will allow for database-agnostic magic.
+    
+\section{Research in Context of the Department}
+
+Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad_synthetic_2022} and unpublished work by \cite{sacchi_climate-neutral_2022}.
+
+    The proposed development of a modular hybridization tool at part of the package \texttt{Brightway} builds on the strong tradition of life-cycle assessment in the Group for Technology Assessment of the Laboratory for Energy Analysis at the Paul Scherrer Institute \footnote{\url{https://www.psi.ch/en/ta/life-cycle-assessment}}. More specifically, life-cycle inventory hybridization is the logical next step connecting work by Aleksandra Kim on global sensitivity analysis of life-cycle assessment \cite{kim_aleksandra-kimgwp_uncertainties_2022}\cite{kim_aleksandra-kimgsa_framework_2021}\cite{paulillo_influential_2021} and work by Romain Sacchi on prospective life-cycle analysis based on integrated assessment models \cite{noauthor_premise_2022}\cite{sacchi_prospective_2022}. The former enables practitioners to understand the drivers of uncertainty, thereby guiding additional life-cycle inventory data collection efforts. The latter 
+    However, as illustrated in the introduction, estimates of XXX> Data collection at the process level might be unfeasible due to a lack of data, the 
+    Hybridization closes this gap, thereby offering the most accurate assessment to date.
+    
+    The choice of aviation as the main case study of the proposed tools reflects the importance of the topic laid out in the introduction. It builds on and supplements existing work in the Technology Assessment group by Zipeng Liu and Tom Terlouw \cite{terlouw_large-scale_2022}. It further enables the development of the MAVT lectures \textit{Basics of Air Transport (Aviation I)} and \textit{Management of Air Transport (Aviation II)} \footnote{compare the study plan agreed upon with Prof. McKenna in the appendix} offer an opportunity to XXX.
+    
+    Due to the multi-method approach combining software development and mathematical optimization with hybrid life-cycle assessment, a number of collaboration opportunities have been identified:
+	
+	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. The RECCE (Resource to Climate Comparison Evaluator) \cite{noauthor_recce_2022} already provides XXXX. 
+ With a holistic approach to XXX, including fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design, XXX. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
+    
+    In addition, the Sustainability Commission\footnote{\url{https://mavt.ethz.ch/the-department/organization/bodies-and-committees.html}} of the Department of Mechanical Engineering at ETH Zurich has recently published a draft of their white paper on air transport. The commission suggest the founding of  \textit{"a scientific coalition of the international scientific societies and academic institutions for climate-neutral aviation"} \cite{mazzotti_air_2022}. The details of the proposal and any further action on the part of the the university, the department and research are currently pending further decisions by the commission. However, a supporting role of can be envisioned (LEA TA, ESA?).
+
+
 
 \newpage
 \section{Progress to Date}
@@ -656,113 +655,7 @@ F3: PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
                 \label{tab_inclusion_exclusion}
             \end{table}
     
-    \subsubsection{Boolean Search Logic}
-    \label{sub_boolean}
-        
-        Note that all upper case strings indicate search operators, all lower case strings indicate search terms. Compare the \textit{Scopus Advanced Search} documentation for a list of operator precedence and syntax definitions \footnote{\url{https://service.elsevier.com/app/answers/detail/a_id/11365/}}. For the inclusion and exclusion considerations that informed the logic, compare table \ref{tab_inclusion_exclusion}.
-        
-        \paragraph{(F1.1) Hybrid LCA methods}
-        \ % required for listings to work with \paragraph{}
-        
-\begin{code_search}
-TITLE-ABS-KEY(
-    {hybrid life-cycle}
-    OR
-    {hybrid life cycle}
-    OR
-    {hybrid LCA}
-)
-AND TITLE-ABS-KEY(
-    *mrio* or *plca* or eeio or hlca
-)
-AND TITLE-ABS-KEY(
-    {truncation} or {double counting} or {double-counting}
-)
-AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
-    ECON OR BUSI OR SOCI
-)
-\end{code_search}
-
-        \paragraph{(F1.2) Prospective (hybrid) LCA methods}
-        \ % required for listings to work with \paragraph{}
-        
-\begin{code_search}
-TITLE-ABS-KEY(
-    {hybrid life-cycle}
-    OR
-    {hybrid life cycle}
-    OR
-    {hybrid LCA}
-)
-AND TITLE-ABS-KEY(
-    prospect*
-)
-AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI
-)
-\end{code_search}
-
-        \paragraph{(F2.1) LCA specific to (sustainable) aviation}
-        \ % required for listings to work with \paragraph{}
-            
-\begin{code_search}
-TITLE-ABS-KEY(
-    {life-cycle assessment}
-    OR
-    {life cycle assessment}
-    OR
-    {lca}
-)
-AND TITLE-ABS-KEY(
-    sustainable W/3 aviation
-)
-AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
-    ECON OR BUSI OR SOCI
-)
-\end{code_search}
-
-        \paragraph{(F2.2) Hybrid LCA specific to (sustainable) aviation}
-        \ % required for listings to work with \paragraph{}
-            
-\begin{code_search}
-TITLE-ABS-KEY(
-    {hybrid life-cycle assessment}
-    OR
-    {hybrid life cycle assessment}
-    OR plca OR *mrio* or eeio
-)
-AND TITLE-ABS-KEY(
-    aviation OR {air transport}
-)
-AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
-    ECON OR BUSI OR SOCI
-)
-\end{code_search}
-
-        \paragraph{(F3.1) Impact of different GHG standards/implementations in LCA}
-        \ % required for listings to work with \paragraph{}
-
-\begin{code_search}
-TITLE-ABS-KEY(
-    {hybrid life-cycle assessment}
-    OR
-    {hybrid life cycle assessment}
-    OR plca OR *mrio* or eeio
-)
-AND TITLE-ABS-KEY(
-    aviation OR {air transport}
-)
-AND SUBJAREA(
-    PHYS OR ENER OR CENG OR CHEM OR COMP OR EART OR ENVI OR
-    ECON OR BUSI OR SOCI
-)
-\end{code_search}
-
 \newpage
-
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
