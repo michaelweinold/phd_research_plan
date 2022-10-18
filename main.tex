@@ -135,8 +135,6 @@
             \item a lack of automated tools that would allow these methods to be easily used by non-hybrid LCA specialists
         \end{enumerate}
 
-        Perhaps most notably, the methods used 
-        
         \begin{table}[H]
             \centering
             \begin{tabularx}{\textwidth}{| X | X | X | X |}
@@ -178,13 +176,11 @@
                     Chang et al., 2014 \cite{chang_shale--well_2014} & Resource Extraction & generic? & CO2eq, SO2, NOx, CH4 \\
                 \hline
             \end{tabularx}
-            \caption{Selection of environmental impact studies using a hybrid life-cycle assessment methodology. Studies excluded are those older than 5 years with less than 5 citations and those describing sectors deemed too specific (e.g. \textit{"Comparative life cycle assessment of drinking straws in Brazil" \cite{zanghelini_comparative_2020}}. Abbreviations: IO = Input Output Table/Database, PLCI = Process-Based Life-Cycle Inventory Database, MC = Monte-Carlo Technique}
+            \caption{Selection of environmental impact studies using a hybrid life-cycle assessment methodology. Studies excluded are those older than 5 years with less than 5 citations and those describing sectors deemed too specific (e.g. \textit{"Comparative life cycle assessment of drinking straws in Brazil" \cite{zanghelini_comparative_2020}}). Note that no two studies used the same exact methodology and all studies used either fully manual or semi-manual methods to hybridize inventory. For a more comprehensive list, compare also \cite{crawford_hybrid_2018}. Abbreviations: IO = Input Output Table/Database, PLCI = Process-Based Life-Cycle Inventory Database, MC = Monte-Carlo Technique}
             \label{tab_studies}
         \end{table}
         
         In this context, the most significant contribution to the practical application of hybridization methodology identified since the respective formalizations is work by Agez et al. on introducing a heuristics-based semi-automated approach to avoiding double counting in tiered hybrid approaches \cite{agez_lifting_2019}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}. The associated scientific software package, however, is poorly documented and includes no tests. Its output can thus not be easily verified.
-        
-        So while practitioners agree that further work is needed, this provides an excellent starting point.
 
     %\subsection{Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation}
     
@@ -218,8 +214,7 @@
     
     The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
     
-    Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}.
-
+    Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}. Inventory analysis will be guided by global sensitivity analysis based on Monte-Carlo methods developed and implemented by Kim et al. \cite{kim_global_2022}. Information on the future economy and electricity mix will be integrated using methods developed by Sacchi et al. \cite{sacchi_prospective_2022}.
 
 \section{Planned Journal Publications}
 
@@ -249,24 +244,16 @@
     
 \section{Research in Context of the Department}
 
-Existing knowledge within PSI, for instance the recent thesis by Saad \cite{saad_synthetic_2022} and unpublished work by \cite{sacchi_climate-neutral_2022}.
-
-    The proposed development of a modular hybridization tool at part of the package \texttt{Brightway} builds on the strong tradition of life-cycle assessment in the Group for Technology Assessment of the Laboratory for Energy Analysis at the Paul Scherrer Institute \footnote{\url{https://www.psi.ch/en/ta/life-cycle-assessment}}. More specifically, life-cycle inventory hybridization is the logical next step connecting work by Aleksandra Kim on global sensitivity analysis of life-cycle assessment \cite{kim_aleksandra-kimgwp_uncertainties_2022}\cite{kim_aleksandra-kimgsa_framework_2021}\cite{paulillo_influential_2021} and work by Romain Sacchi on prospective life-cycle analysis based on integrated assessment models \cite{noauthor_premise_2022}\cite{sacchi_prospective_2022}. The former enables practitioners to understand the drivers of uncertainty, thereby guiding additional life-cycle inventory data collection efforts. The latter 
-    However, as illustrated in the introduction, estimates of XXX> Data collection at the process level might be unfeasible due to a lack of data, the 
-    Hybridization closes this gap, thereby offering the most accurate assessment to date.
+    The proposed development of a modular hybridization tool at part of the package \texttt{Brightway} builds on the strong tradition of life-cycle assessment in the Group for Technology Assessment of the Laboratory for Energy Analysis at the Paul Scherrer Institute \footnote{\url{https://www.psi.ch/en/ta/life-cycle-assessment}}. More specifically, life-cycle inventory hybridization is the logical next step connecting work by Aleksandra Kim on global sensitivity analysis of life-cycle assessment \cite{kim_aleksandra-kimgwp_uncertainties_2022}\cite{kim_aleksandra-kimgsa_framework_2021}\cite{paulillo_influential_2021} and work by Romain Sacchi on prospective life-cycle analysis based on integrated assessment models \cite{noauthor_premise_2022}\cite{sacchi_prospective_2022}. The former enables practitioners to understand the drivers of uncertainty, thereby guiding additional life-cycle inventory data collection efforts. However, as illustrated in the introduction, a complete collection of data at the process level is unfeasible. The latter provides the basis for the assessment of future technologies. Together, they provide the basis for prospective hybrid-life cycle assessment. 
     
-    The choice of aviation as the main case study of the proposed tools reflects the importance of the topic laid out in the introduction. It builds on and supplements existing work in the Technology Assessment group by Zipeng Liu and Tom Terlouw \cite{terlouw_large-scale_2022}. It further enables the development of the MAVT lectures \textit{Basics of Air Transport (Aviation I)} and \textit{Management of Air Transport (Aviation II)} \footnote{compare the study plan agreed upon with Prof. McKenna in the appendix} offer an opportunity to XXX.
+    The choice of aviation as the main case study of the proposed tools reflects the importance of the topic laid out in the introduction. It builds on and supplements existing work in the Technology Assessment group by Zipeng Liu and Tom Terlouw \cite{terlouw_large-scale_2022}, as well as recent work by Saad \cite{saad_synthetic_2022} and unpublished work by Sacchi et al. \cite{sacchi_climate-neutral_2022}. It further enables the development of the MAVT lectures \textit{Basics of Air Transport (Aviation I)} and \textit{Management of Air Transport (Aviation II)} to include a stronger focus on sustainable aviation.
     
     Due to the multi-method approach combining software development and mathematical optimization with hybrid life-cycle assessment, a number of collaboration opportunities have been identified:
 	
-	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. The RECCE (Resource to Climate Comparison Evaluator) \cite{noauthor_recce_2022} already provides XXXX. 
- With a holistic approach to XXX, including fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design, XXX. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
+	The biggest academic collaboration opportunity identified is the \textit{Cambridge Aviation Impact Accelerator}\footnote{\url{https://www.aiazero.org/}}, founded in 2020 as a collaborative effort of the Whittle Laboratory and Clarence House. Their Resource to Climate Comparison Evaluator (RECCE) \cite{noauthor_recce_2022} provides an overview of the environmental impact of proposed aviation technologies. Similar to the results envisioned for the sustainable aviation case-study proposed as part of this research project, its methodology has not been disclosed. The center takes a holistic approach to sustainable aviation, including a focus on fuels, aircraft and propulsion technologies, airports, non-CO2 emissions, network modelling, broader economic and policy context, and model design. Research initiatives related to sustainable aviation identified in Switzerland and the European Union usually focus on narrow aspects of efficiency improvements (such as the sub-projects of the EU CleanSky2\footnote{\url{https://www.clean-aviation.eu/clean-sky-2}} program) or on sustainable fuels only (such as the call for research into sustainable fuels\footnote{\url{https://www.bfe.admin.ch/bfe/en/home/research-and-cleantech/funding-program-sweet/calls-for-proposals-overview/sweet-call-2-2022.html}} as part of the SWEET (SWiss Energy research for the Energy Transition) program).
     
-    In addition, the Sustainability Commission\footnote{\url{https://mavt.ethz.ch/the-department/organization/bodies-and-committees.html}} of the Department of Mechanical Engineering at ETH Zurich has recently published a draft of their white paper on air transport. The commission suggest the founding of  \textit{"a scientific coalition of the international scientific societies and academic institutions for climate-neutral aviation"} \cite{mazzotti_air_2022}. The details of the proposal and any further action on the part of the the university, the department and research are currently pending further decisions by the commission. However, a supporting role of can be envisioned (LEA TA, ESA?).
+    In addition, the Sustainability Commission\footnote{\url{https://mavt.ethz.ch/the-department/organization/bodies-and-committees.html}} of the Department of Mechanical Engineering at ETH Zurich has recently published a draft of their white paper on air transport. The commission suggest the founding of  \textit{"a scientific coalition of the international scientific societies and academic institutions for climate-neutral aviation"} \cite{mazzotti_air_2022}. The details of the proposal and any further action on the part of the the university, the department and research are currently pending further decisions by the commission. However, a supporting role, perhaps providing specific insights or providing support during computational tasks, is envisioned.
 
-
-
-\newpage
 \section{Progress to Date}
 
     As per October 2022, the following sub-tasks have been started and/or successfully completed:
