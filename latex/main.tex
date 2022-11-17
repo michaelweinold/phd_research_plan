@@ -24,6 +24,14 @@
 \usepackage{enumitem}
 % embedd pdf files
 \usepackage{pdfpages}
+% multi-line comments
+\usepackage{comment}
+% landscape orientation tables
+\usepackage{rotating}
+\usepackage{pdflscape}
+% Gantt charts
+\usepackage{pgfgantt}
+
 
 % code
 \usepackage{listings} % https://tex.stackexchange.com/a/53951
@@ -58,7 +66,7 @@
 	\texttt{michael.weinold@psi.ch} \\
 }
 
-\date{19. October 2022}
+\date{22. November 2022}
 
 \renewcommand{\headeright}{Doctoral Research Plan}
 \renewcommand{\undertitle}{Doctoral Research Plan}
@@ -219,26 +227,6 @@ https://www.aiazero.org/blog/climate-neutrality-not-just-carbon-neutrality-blog/
     The software package will implement the \texttt{Brightway} API to make use of existing database import functionality and function as part of the envisioned computational engine of the \textit{WISER Digital Ecosystem}. To conform with best practices for documenting scientific software \cite{lee_ten_2018}, logic and schemas will be documented using the \texttt{Sphinx}\footnote{\url{https://www.sphinx-doc.org/}} documentation generator and link to relevant literature.
     
     Using this toolkit, the case study will be conducted using prospective \cite{sacchi_prospective_2022} life-cycle assessment using a hybridized inventory \cite{crawford_hybrid_2018}. Inventory analysis will be guided by global sensitivity analysis based on Monte-Carlo methods developed and implemented by Kim et al. \cite{kim_global_2022}. Information on the future economy and electricity mix will be integrated using methods developed by Sacchi et al. \cite{sacchi_prospective_2022}.
-
-\section{Planned Journal Publications}
-
-    For additional context on the timeline of the publications, including mandatory WISER deliverables and proposed work packages, compare the timeline at \url{https://phd.weinold.ch/timeline}.
-    
-    \begin{enumerate}
-    \setcounter{enumi}{0}
-        \item Carbon (Greenhouse Gas) Accounting with Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
-    \end{enumerate}
-    % compare \cite{bourgault_documentation_2021}
-    
-    \begin{enumerate}
-    \setcounter{enumi}{1}
-        \item Methodology of Modular Hybridization of Life-Cycle Inventory Data \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
-    \end{enumerate}
-    
-    \begin{enumerate}
-    \setcounter{enumi}{2}
-        \item Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation \\ Target journals: Nature Climate Change (IF(2020) = 21.72), Energy and Environmental Science (IF(2020) = 38.53)
-    \end{enumerate}
     
 \section{Research in the Context of the WISER Flagship}
     
@@ -279,24 +267,250 @@ https://www.aiazero.org/blog/climate-neutrality-not-just-carbon-neutrality-blog/
         \item
             Upgrade of \texttt{Brighway} packaging/delivery from \texttt{PyPi} to \texttt{Conda-Forge} to enable platform-specific dependencies \footnote{\url{https://github.com/brightway-lca/brightway2/issues/47}}. This enables user-friendly setup on macOS running on M1 processors with AArch64 ("ARM64") architecture \footnote{\url{https://github.com/brightway-lca/brightway2/issues/46}}. Previously, platform-specific sparse linear algebra solvers required high levels of user intervention during setup with high failure rates \footnote{\url{https://github.com/LCA-ActivityBrowser/activity-browser/issues/705}}. Status: New setup tested, respective GitHub issues closed. Merge of \texttt{conda} recipes into the \texttt{conda-forge} repository completed for first core packages, other packages pending.
     \end{enumerate}
-
+\begin{comment}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{figures/performance.png}
 	\caption{Average runtime of different sparse matrix row-wise manipulation algorithms operating on two different matrices. The most efficient algorithm (\textit{"data mask"}) achieves a runtime improvement of three orders of magnitude over the current implementation in \texttt{pylcaio}. Similar improvements are expected for other parts of the hybridization, based on the current understanding of the code. An overall improvement of at least one, possibly two orders of magnitude Measured using \texttt{\%timeit} (number of loops determined automatically, dependent on convergence of measurement results) under Python 3.10. on an Apple M1 Max platform with 32GB RAM \cite{weinold_github_2022}.}
 	\label{fig:performance}
 \end{figure}
+\end{comment}
 
 \newpage
-\section{Work Packages}
-
-    Work packages WP1.X are designed to address the aforementioned issues with current solutions for the hybridization of life-cycle inventory. They will also provide the toolkit for investigation of specific technologies in work packages WP3.X. In themselves, they will provide a valuable contribution to the scientific community practicing life-cycle assessment. Building on existing work of the \texttt{Brightway} package, they will be reproducible, XXX, XXX.
+\section{Timeline}
     
-    Work packages WP2.X are designed to meet the mandatory WISER deliverables of sub-project 2. The improvements in the computational infrastructure are also targeted at streamlining computationally heavy tasks in work packages WP3.X. They will further provide a simplified framework for the technical documentation of scientific code, which will speed up any publications resulting from work packages WP1.X and WP3.X \footnote{Compare, for instance, the \texttt{pvlib} documentation \url{https://pvlib-python.readthedocs.io/en/stable/reference/generated/pvlib.atmosphere.gueymard94_pw.html}}.
+    \subsection{Journal Publications}
     
-    Work packages WP3.X build on the toolkit provided by work packages WP1.X and WP2.X. They are designed to answer specific questions related to the field of sustainable aviation. Out of all work packages, they provide the best opportunity for supervision of master's students.
+    \begin{enumerate}
+    \setcounter{enumi}{0}
+        \item Carbon (Greenhouse Gas) Accounting with Life-Cycle Software \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    % compare \cite{bourgault_documentation_2021}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{1}
+        \item Methodology of Modular Hybridization of Life-Cycle Inventory Data \\ Target journals: Journal of Cleaner Production (IF(2020) = 9.297), Journal of Industrial Ecology (IF(2020) = 6.946), International Journal of Life Cycle Assessment (IF(2021) = 5.257)
+    \end{enumerate}
+    
+    \begin{enumerate}
+    \setcounter{enumi}{2}
+        \item Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation \\ Target journals: Nature Climate Change (IF(2020) = 21.72), Energy and Environmental Science (IF(2020) = 38.53)
+    \end{enumerate}
 
-    Note that generic WISER deliverables, such as annual reports and the mid-term review, are not associated with any one work package. For a full list of WISER deliverables, compare "Subproject 2: Computation \& Assessment Toolbox" in the appendix.
+    \newpage
+    \section{Work Packages}
+    
+        A detailed description of work packages is provided in Table \ref{tab:work_packages}. The associated timeline is rendered in a Gantt chart in Figure \ref{fig:gantt}. Note that deliverables associated with the WISER project are not listed. For a full list of WISER deliverables, compare the \textit{Innosuisse Flagship Initiative Proposal: Web of Interoperable Digital Services for Knowledge on Decarbonisation Pathways (WISER)}.
+    
+            \begin{figure}[h!]
+                \begin{ganttchart}[
+                    expand chart=\textwidth,
+                    vgrid={*2{gray, dotted}, *1{gray}},
+                    y unit chart = 0.75cm,
+                    bar height = 0.7,
+                ]{1}{48}
+                % title 1 (years)
+                    \gantttitle[]{2022}{6} 
+                    \gantttitle[]{2023}{12}
+                    \gantttitle[]{2024}{12}
+                    \gantttitle[]{2025}{12}
+                    \gantttitle[]{2026}{6} \\
+                % title 2 (quarters)
+                    \gantttitle{Q3}{3}
+                    \gantttitle{Q4}{3}
+                    \gantttitle{Q1}{3}
+                    \gantttitle{Q2}{3}
+                    \gantttitle{Q3}{3}
+                    \gantttitle{Q4}{3}
+                    \gantttitle{Q1}{3}
+                    \gantttitle{Q2}{3}
+                    \gantttitle{Q3}{3}
+                    \gantttitle{Q4}{3}
+                    \gantttitle{Q1}{3}
+                    \gantttitle{Q2}{3}
+                    \gantttitle{Q3}{3}
+                    \gantttitle{Q4}{3}
+                    \gantttitle{Q1}{3}
+                    \gantttitle{Q2}{3}\\
+                % work packages
+                \ganttgroup[inline=false]{WP1}{1}{9} \\
+                    \ganttbar[inline = true]{WP1.1}{1}{6} \\
+                    \ganttbar[inline = true]{WP1.2}{6}{9} \\
+                \ganttgroup[inline=false]{WP2}{9}{26} \\
+                    \ganttbar[inline = true]{WP2.1}{9}{13} \\
+                    \ganttbar[inline = true]{WP2.2}{13}{24} \\
+                    \ganttbar[inline = true]{WP2.3}{17}{26} \\
+                \ganttgroup[inline=false]{WP3}{9}{26} \\
+                    \ganttbar[inline = true]{WP2.1}{9}{13} \\
+                    \ganttbar[inline = true]{WP2.2}{13}{24} \\
+                    \ganttbar[inline = true]{WP2.3}{17}{26} \\
+                \ganttgroup[inline=false]{WP3}{9}{26} \\
+                    \ganttbar[inline = true]{WP2.1}{9}{13} \\
+                    \ganttbar[inline = true]{WP2.2}{13}{24} \\
+                % annotations
+                %    \ganttvrule[
+                %        vrule/.append style={red},
+                %        vrule offset=.2,
+                %        vrule label node/.append style={anchor=north west},
+                %    ]{WISER MTR}{18}
+                \end{ganttchart}
+                \caption{Timeline associated with the doctoral research plan. WP1: Literature Review, WP2: Hybridization of Life-Cycle Inventory, WP3: Carbon Footprinting, WP4: Case Study. For detailed descriptions of the different work packages (WP), compare Table \ref{tab:work_packages}.}
+                \label{fig:gantt}
+            \end{figure}
+        
+    
+    \begin{landscape}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabularx}{\linewidth}{|l|X|X|X|X|X|X|X|}
+            \hline
+                \textbf{\#}
+                &
+                \textbf{Research Question}
+                &
+                \textbf{Sub-Question}
+                &
+                \textbf{Work Package}
+                &
+                \textbf{Duration}
+                &
+                \textbf{Description}
+                & 
+                \textbf{Publication}
+                &
+                \textbf{WISER Deliverable}
+            \\
+            \hline
+            \hline
+                1.1
+                &
+                N/A
+                &
+                How do methods differ exactly?
+                &
+                Literature Review (Hybridization Methods)
+                &
+                [Q3 2022 - Q4 2022]
+                &
+                Add description here
+                &
+                Paper 1 \textit{"Literature Review of XXX"} (compare Section \ref{sec:journal_publications})
+                &
+                D2.2
+            \\
+            \hline
+                1.2
+                &
+                N/A
+                &
+                What footprinting methods exist already, how do they differ?
+                &
+                Literature Review (Footprinting Methods)
+                &
+                [Q4 2022 - Q1 2023]
+                &
+                Add description here
+                &
+                Paper 1 \textit{"Literature Review of XXX"} (compare Section \ref{sec:journal_publications})
+                &
+                M2.1, D2.1, D2.2, D2.5
+            \\
+            \hline
+            \hline
+                2.1
+                &
+                N/A
+                &
+                Which hybridization method is best?
+                &
+                Implementation of Hybridization Methods
+                &
+                [Q3 2022 - Q3 2023]
+                &
+                Add description here
+                &
+                Paper 3 \textit{"Modular Life-Cycle Inventory Hybridization"} (compare Section \ref{sec:journal_publications})
+                &
+                D2.2, D2.3, M2.2, M2.4
+            \\
+            \hline
+                2.2
+                &
+                N/A
+                &
+                Which hybridization method is best?
+                &
+                Iterative Tuning and Search for Parameters
+                &
+                [Q3 2023 - Q2 2024]
+                &
+                Description here
+                &
+                Publication 4 \textit{Hybrid LCA for Sustainable Aviation} (compare Section \ref{sec:journal_publications})
+                &
+                D2.2, D2.3, M2.2, M2.4
+            \\
+            \hline
+                2.3
+                &
+                N/A
+                &
+                Which hybridization method is best?
+                &
+                Testing and Documentation
+                &
+                [Q3 2022 - Q4 2023]
+                &
+                Description here
+                &
+                N/A (potentially a communication in OSS journal)
+                &
+                D2.1, D2.2, D2.3, D2.6
+            \\
+            \hline
+            \hline
+                3.1
+                &
+                N/A
+                &
+                Which footprinting methods exist?
+                &
+                Implementation of Footprinting Methods
+                &
+                [QX 2023 - QX 2023]
+                &
+                Description here
+                &
+                Paper 1 \textit{"Literature Review of XXX"} (compare Section \ref{sec:journal_publications})
+                &
+                M2.1, D2.1, D2.2, D2.5
+            \\
+            \hline
+                3.2
+                &
+                N/A
+                &
+                Which footprinting methods exist?
+                &
+                Testing and Documentation
+                &
+                [QX 2023 - QX 202X]
+                &
+                Description here
+                &
+                N/A (potentially a communication in OSS journal)
+                &
+                M2.1, D2.1, D2.2, D2.5
+            \\
+            \hline
+        \end{tabularx}
+        \caption{Overview of work packages associated with the doctoral research plan.}
+        \label{tab:work_packages}
+    \end{table}
+    \end{landscape}
+    
+    
 
     \begin{table}[H]
         \centering
@@ -554,10 +768,6 @@ https://www.aiazero.org/blog/climate-neutrality-not-just-carbon-neutrality-blog/
     \end{table}
     
     This includes the (potentially prospective, based on \texttt{premise}) life-cycle assessment based on a hybridized inventory. Scope: TBD. Risks: TBD.
-    
-\section{Time Schedule}
-
-    The proposed schedule associated with this research plan can be viewed as an interactive \textit{Markwhen}\footnote{\url{https://github.com/kochrt/markwhen}} timeline at \url{https://phd.weinold.ch/timeline}.
 
 \newpage
 \section{Appendix}
