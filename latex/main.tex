@@ -2,7 +2,9 @@
 % formatting
 \usepackage{auxiliary/style_files/arxiv}
 \usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage[T1]{fontenc} % use 8-bit T1 fonts
+% document structure
+\setcounter{secnumdepth}{5} % enable numbered sub-sub-sections etc.
 % cross-referencing
 \usepackage{hyperref}
 % tables
@@ -11,18 +13,19 @@
 \usepackage{multirow}
 \usepackage{caption} 
 \usepackage{float} % for forcing placement
+\makesavenoteenv{tabular} % for footnotes in tabular environment
 \captionsetup[table]{skip=10pt}
 % fonts
 \usepackage{amsfonts}
 \usepackage{microtype}
 % color
 \usepackage{color}
-\definecolor{verbgray}{gray}{0.9}
+\definecolor{verbgray}{gray}{0.9} % for listings package
 % figures
 \usepackage{graphicx}
 % enumeration
 \usepackage{enumitem}
-% embedd pdf files
+% embed pdf files
 \usepackage{pdfpages}
 % multi-line comments
 \usepackage{comment}
@@ -33,8 +36,8 @@
 \usepackage{pgfgantt}
 % layout
 \usepackage{layout}
-
-
+%footnotes
+\usepackage{footnote}
 % code
 \usepackage{listings} % https://tex.stackexchange.com/a/53951
 \lstnewenvironment{code_search}{
@@ -46,10 +49,7 @@
         xleftmargin=0cm,
     }
 }{}
-\setcounter{secnumdepth}{5}
 
-\usepackage{footnote}
-\makesavenoteenv{tabular}
 
 \title{Prospective Hybrid Life-Cycle Assessment for Sustainable Aviation}
 
@@ -68,10 +68,13 @@
 	\texttt{michael.weinold@psi.ch} \\
 }
 
+
 \date{22. November 2022}
+
 
 \renewcommand{\headeright}{Doctoral Research Plan}
 \renewcommand{\undertitle}{Doctoral Research Plan}
+
 
 \hypersetup{
     pdftitle={Doctoral Research Plan},
@@ -192,15 +195,27 @@
         
         In this context, the most significant contribution to the practical application of hybridization methodology identified since the respective formalizations is work by Agez et al. on introducing a heuristics-based semi-automated approach to avoiding double counting in tiered hybrid approaches \cite{agez_lifting_2019}\cite{agez_hybridization_2020}\cite{agez_correcting_2022}. The associated scientific software package, however, is poorly documented and includes no tests. Its output can thus not be easily verified.
 
+    
+        
+    
+\section{Aviation}
+
     %\subsection{Prospective Hybrid Life-Cycle Assessment of Sustainable Aviation}
     
     %    No publication was identified using hybrid life-cycle assessment for the prospective assessment of sustainable aviation.
         
     %    include the work by sacchi et al.
     %    include the work by patt et al.
-        
+
+\cite{prussi_corsia_2021}
+
+how are sustainable aviation fuels defined -> CORSIA \cite{prussi_corsia_2021}
+
+    Carbon emissions estimations for individual flights have been available from major flight search providers, including \textit{Google Flights} \cite{holden_google_2021}, \textit{Kayak} \cite{noauthor_kayak_2021} and \textit{SkyScanner} \cite{crosthwaite_how_2021} from 2021. Early studies have shown that the prominent display of carbon emissions can have positive enironmental impact by nudging consumers to choose flights that XXX \cite{amenta_adding_2020}\cite{sanguinetti_nudging_2022}.
     
-\section{Aviation}
+    However, different methodologies are used to estimate carbon emissions, leading to significant differences in total estimated carbon emissions. For instance, the development team of \textit{Google Flights} changed the calculation methodology to account for direct-air carbon emissions only, disregarding non-carbon emissions \cite{ali_commit_2022}. This has drawn criticism of \textit{"airbrushing emissions"} by environmental non-governmental organizations \cite{hern_google_2022}\cite{rowlatt_google_2022}.
+    
+    Bombardier published an environmental product declaration (LCA) in 2022: \cite{noauthor_challenger_2022}
 
 https://www.aiazero.org/blog/climate-neutrality-not-just-carbon-neutrality-blog/
     
